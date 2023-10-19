@@ -1,0 +1,19 @@
+body{
+  font-family: 'Lora', serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.page-header__logo{
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+}
+
+.page-header__nav-link{
+  color: #000;
+  text-decoration: none;
+}
+.page-header__nav-link:hover{
+  text-decoration: underline;
+}
