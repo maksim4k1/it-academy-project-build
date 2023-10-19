@@ -1,2 +1,2 @@
-# it-academy-project
-Ссылка на сайт: [https://maksim4k1.github.io/it-academy-project/](https://maksim4k1.github.io/it-academy-project/)
+# it-academy-project (build)
+Ссылка на сайт: [https://maksim4k1.github.io/it-academy-project-build/](https://maksim4k1.github.io/it-academy-project-build/)
