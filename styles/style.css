@@ -12,21 +12,37 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: var(--color-black);
-  background: url('../assets/png/noise.png'), url('../assets/png/фон 1.png');
+  background: url('../assets/png/noise.png'), url('../assets/png/gradient.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 147px;
+  z-index: 100;
+}
+.page-header::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: var(--color-page-header-background);
+  backdrop-filter: blur(10px);
+  z-index: -1;
 }
 .page-header__container {
-  height: 147px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  max-width: 1334px;
+  max-width: 1414px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -74,37 +90,45 @@ body {
 }
 
 .main-header {
-  margin: 100px 0;
+  margin: 247px 0 100px;
 }
-.main-header__quote {
-  margin: 0;
+.main-header__title {
+  font-family: 'Lora', serif;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.main-header__text {
   font-family: 'Lora', serif;
   font-size: 45px;
   text-align: center;
   text-transform: uppercase;
 }
-.main-header__logo-container {
+.main-header__picture {
+  max-height: 325px;
   position: relative;
   display: flex;
   justify-content: center;
   margin: 70px 0;
 }
-.main-header__logo {
-  height: 325px;
+.main-header__image {
+  max-width: 100%;
+  height: 100%;
   text-align: center;
 }
-.main-header__logo-container::before,
-.main-header__logo-container::after {
+.main-header__picture::before,
+.main-header__picture::after {
   position: absolute;
   top: 0;
   left: 0;
   content: '';
   display: block;
-  width: calc(50% - 1920px / 2);
-  height: 325px;
+  width: calc(50% - 1920px / 2 + 100px);
+  height: 100%;
   background: var(--color-black);
 }
-.main-header__logo-container::after {
+.main-header__picture::after {
   right: 0;
   left: auto;
 }
