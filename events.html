@@ -43,30 +43,46 @@
       </div>
     </header>
     <main class="main">
-      <div class="home">
-        <header class="main-header home__main-header">
-          <h1 class="main-header__title">арт — пространство</h1>
-          <picture class="main-header__picture">
-            <img src="./assets/svg/lenni.svg" alt="LENNI" class="main-header__image">
-          </picture>
-          <p class="main-header__text">для людей, горящих сердцем и делом<br/>место для настоящего</p>
+      <div class="events">
+        <div class="events__container">
+          <div class="events__breads breads">
+            <a href="/" class="events__breads-link breads__link">Главная</a> / Мероприятия</div>
+          <h2 class="events__title title">Мероприятия</h2>
+          <div class="events__list listing">
+            <article class="listing__card-event card-event">
+              <a href="#" class="card-event__link">
+                <picture class="card-event__picture">
+                  <img src="./assets/png/Nirvana.png" alt="#" class="card-event__picture-img"/>
+                </picture>
+                <h3 class="card-event__title">Собираемся и слушаем альбом Nirvana. Nirvana</h3>
+                <p class="card-event__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                <datetime datetime="2022-12-07T18:00" class="card-event__time">07.12.2022 | начало 18.00</datetime>
+              </a>
+            </article>
 
-          <div class="main-header__buttons">
-            <div class="main-header__buttons-title">Я хочу:</div>
-            <div class="main-header__buttons-container">
-              <button class="main-header__button main-header__button--red button">Провести мероприятие</button>
-              <button class="main-header__button main-header__button--white button">Стать арендатором</button>
-            </div>
+            <article class="listing__card-event card-event">
+              <a href="#" class="card-event__link">
+                <picture class="card-event__picture">
+                  <img src="./assets/png/Image.png" alt="#" class="card-event__picture-img"/>
+                </picture>
+                <h3 class="card-event__title">Есть тема, нужно обсудить с HowStuffWorks</h3>
+                <p class="card-event__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                <datetime datetime="2022-12-14T18:30" class="card-event__time">14.12.2022 | начало 18.30</datetime>
+              </a>
+            </article>
+
+            <article class="listing__card-event card-event">
+              <a href="#" class="card-event__link">
+                <picture class="card-event__picture">
+                  <img src="./assets/png/Sade.png" alt="#" class="card-event__picture-img"/>
+                </picture>
+                <h3 class="card-event__title">Вечер | The Best of Sade</h3>
+                <p class="card-event__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                <datetime datetime="2022-12-16T20:00" class="card-event__time">16.12.2022 | начало 20.00</datetime>
+              </a>
+            </article>
           </div>
-        </header>
-
-        <section class="offers home__offers"></section>
-        <section class="about home__about"></section>
-        <section class="upcoming home__upcoming"></section>
-        <section class="listing home__listing"></section>
-        <section class="contacts home__contacts"></section>
-
-        <div class="doit home__doit"></div>
+        </div>
       </div>
     </main>
     <footer class="page-footer"></footer>
