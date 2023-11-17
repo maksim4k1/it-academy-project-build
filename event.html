@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/styles.css">
+
+  <title>LENNI ART</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="page-header__container">
+      <a href="index.html" class="page-header__logo">
+        <svg class="page-header__logo-icon">
+          <use xlink:href="assets/icons/symbols.svg#logo"></use>
+        </svg>
+      </a>
+
+      <nav class="page-header__nav">
+        <a href="./events.html" class="page-header__nav-link">Мероприятия</a>
+        <a href="#" class="page-header__nav-link">Блог</a>
+        <a href="#" class="page-header__nav-link">О нас</a>
+        <a href="#" class="page-header__nav-link">Контакты</a>
+      </nav>
+
+      <div class="page-header__user-button-container">
+        <a href="#" class="button page-header__user-button">Войти</a>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="event">
+      <div class="event__container">
+        <div class="event__breads breads">
+          <a href="/" class="event__breads-link breads__link">Главная</a> /
+          <a href="/events.html" class="event__breads-link breads__link">Мероприятия</a> / Вечер | The Best of Sade
+        </div>
+        <section class="event__reservation reservation">
+          <div class="reservation__form reservation-form">
+            <h4 class="reservation-form__legend reservation-form__legend--checkboxes reservation__legend">Забронировать столик</h4>
+            <ul class="reservation-form__checkboxes-list">
+              <li class="reservation-form__table">
+                <input type="checkbox" name="tableNum" id="1" class="reservation-form__checkbox" />
+                <label class="reservation-form__label reservation-form__label--red" for="1">1 стол</label>
+              </li>
+              <li class="reservation-form__table">
+                <input type="checkbox" name="tableNum" id="2" class="reservation-form__checkbox" />
+                <label class="reservation-form__label" for="2">2 стол</label>
+              </li>
+              <li class="reservation-form__table">
+                <input type="checkbox" name="tableNum" id="3" class="reservation-form__checkbox" />
+                <label class="reservation-form__label" for="3">3 стол</label>
+              </li>
+              <li class="reservation-form__table">
+                <input type="checkbox" name="tableNum" id="4" class="reservation-form__checkbox" />
+                <label class="reservation-form__label reservation-form__laber--red" for="4">4 стол</label>
+              </li>
+              <li class="reservation-form__table">
+                <input type="checkbox" name="tableNum" id="5" class="reservation-form__checkbox" disabled />
+                <label class="reservation-form__label" for="5">5 стол</label>
+              </li>
+              <li class="reservation-form__table">
+                <input type="checkbox" name="tableNum" id="6" class="reservation-form__checkbox" />
+                <label class="reservation-form__label" for="6">6 стол</label>
+              </li>
+              <li class="reservation-form__table">
+                <input type="checkbox" name="tableNum" id="7" class="reservation-form__checkbox" />
+                <label class="reservation-form__label reservation-form__label--red" for="7">7 стол</label>
+              </li>
+              <li class="reservation-form__table">
+                <input type="checkbox" name="tableNum" id="8" class="reservation-form__checkbox" />
+                <label class="reservation-form__label reservation-form__label--red" for="8">8 стол</label>
+              </li>
+              <li class="reservation-form__table">
+                <input type="checkbox" name="tableNum" id="9" class="reservation-form__checkbox" />
+                <label class="reservation-form__label reservation-form__label--red" for="9">9 стол</label>
+              </li>
+              <li class="reservation-form__table">
+                <input type="checkbox" name="tableNum" id="10" class="reservation-form__checkbox" />
+                <label class="reservation-form__label" for="10">10 стол</label>
+              </li>
+              <li class="reservation-form__table">
+                <input type="checkbox" name="tableNum" id="11" class="reservation-form__checkbox" />
+                <label class="reservation-form__label" for="11">11 стол</label>
+              </li>
+            </ul>
+            <div class="reservation-form__bilets">
+              <h4 class="reservation-form__legend reservation-form__legend--bilets reservation__legend">Ваши пригласительные билеты</h4>
+              <ul class="reservation-form__bilets-list">
+                <li class="reservation-form__bilets-item">
+                  <div class="reservation-form__count">9 шт. | 1400</div>
+                  <div class="reservation-form__price">12 600</div>
+                </li>
+                <li class="reservation-form__bilets-item">
+                  <div class="reservation-form__count">4 шт. | 1250</div>
+                  <div class="reservation-form__price">5000</div>
+                </li>
+              </ul>
+              <div class="reservation-form__summ">
+                <div class="reservation-form__summ-item">Сумма</div class="reservation-form__summ-item">
+                <div class="reservation-form__summ-item reservation-form__summ-item--right">17 600</div class="reservation-form__summ-item">
+              </div>
+              <button class="reservation-form__button button">Купить билеты</button>
+            </div>
+          </div>
+          <div class="reservation__tables tables">
+            <div class="tables__scene">Сцена</div>
+            <div class="tables__dance-floor">Танцпол</div>
+            <button class="tables__button tables__button--1">
+              <div class="tables__button-container tables__button-container--medium">
+                <div class="tables__table tables__table--checked tables__table--medium">1</div>
+                <div class="tables__chair tables__chair--1"></div>
+                <div class="tables__chair tables__chair--2"></div>
+                <div class="tables__chair tables__chair--3"></div>
+                <div class="tables__chair tables__chair--4"></div>
+                <div class="tables__chair tables__chair--5"></div>
+              </div>
+            </button>
+            <button class="tables__button tables__button--2">
+              <div class="tables__button-container tables__button-container--large">
+                <div class="tables__table tables__table--large">2</div>
+                <div class="tables__chair tables__chair--1"></div>
+                <div class="tables__chair tables__chair--2"></div>
+                <div class="tables__chair tables__chair--3"></div>
+                <div class="tables__chair tables__chair--4"></div>
+                <div class="tables__chair tables__chair--5"></div>
+                <div class="tables__chair tables__chair--6"></div>
+                <div class="tables__chair tables__chair--7"></div>
+              </div>
+            </button>
+            <button class="tables__button tables__button--3">
+              <div class="tables__button-container tables__button-container--large">
+                <div class="tables__table tables__table--large">3</div>
+                <div class="tables__chair tables__chair--1"></div>
+                <div class="tables__chair tables__chair--2"></div>
+                <div class="tables__chair tables__chair--3"></div>
+                <div class="tables__chair tables__chair--4"></div>
+                <div class="tables__chair tables__chair--5"></div>
+                <div class="tables__chair tables__chair--6"></div>
+                <div class="tables__chair tables__chair--7"></div>
+              </div>
+            </button>
+            <button class="tables__button tables__button--4">
+              <div class="tables__button-container tables__button-container--medium">
+                <div class="tables__table tables__table--medium">4</div>
+                <div class="tables__chair tables__chair--1"></div>
+                <div class="tables__chair tables__chair--2"></div>
+                <div class="tables__chair tables__chair--3"></div>
+                <div class="tables__chair tables__chair--4"></div>
+                <div class="tables__chair tables__chair--5"></div>
+              </div>
+            </button>
+            <button class="tables__button tables__button--5" disabled>
+              <div class="tables__button-container tables__button-container--large">
+                <div class="tables__table tables__table--large">5</div>
+                <div class="tables__chair tables__chair--1"></div>
+                <div class="tables__chair tables__chair--2"></div>
+                <div class="tables__chair tables__chair--3"></div>
+                <div class="tables__chair tables__chair--4"></div>
+                <div class="tables__chair tables__chair--5"></div>
+                <div class="tables__chair tables__chair--6"></div>
+                <div class="tables__chair tables__chair--7"></div>
+              </div>
+            </button>
+            <button class="tables__button tables__button--6">
+              <div class="tables__button-container tables__button-container--large">
+                <div class="tables__table tables__table--large">6</div>
+                <div class="tables__chair tables__chair--1"></div>
+                <div class="tables__chair tables__chair--2"></div>
+                <div class="tables__chair tables__chair--3"></div>
+                <div class="tables__chair tables__chair--4"></div>
+                <div class="tables__chair tables__chair--5"></div>
+                <div class="tables__chair tables__chair--6"></div>
+                <div class="tables__chair tables__chair--7"></div>
+              </div>
+            </button>
+            <button class="tables__button tables__button--7">
+              <div class="tables__button-container tables__button-container--medium">
+                <div class="tables__table tables__table--checked tables__table--medium">7</div>
+                <div class="tables__chair tables__chair--1"></div>
+                <div class="tables__chair tables__chair--2"></div>
+                <div class="tables__chair tables__chair--3"></div>
+                <div class="tables__chair tables__chair--4 tables__chair-4--right"></div>
+              </div>
+            </button>
+            <button class="tables__button tables__button--8">
+              <div class="tables__button-container tables__button-container--small">
+                <div class="tables__table tables__table--small">8</div>
+                <div class="tables__chair tables__chair--1"></div>
+                <div class="tables__chair tables__chair--2"></div>
+                <div class="tables__chair tables__chair--3"></div>
+              </div>
+            </button>
+            <button class="tables__button tables__button--9">
+              <div class="tables__button-container tables__button-container--small">
+                <div class="tables__table tables__table--small">9</div>
+                <div class="tables__chair tables__chair--1"></div>
+                <div class="tables__chair tables__chair--2"></div>
+                <div class="tables__chair tables__chair--3"></div>
+              </div>
+            </button>
+            <button class="tables__button tables__button--10">
+              <div class="tables__button-container tables__button-container--bar">
+                <div class="tables__table tables__table--checked tables__table--bar">10</div>
+                <div class="tables__chair tables__chair--1"></div>
+                <div class="tables__chair tables__chair--2"></div>
+                <div class="tables__chair tables__chair--3"></div>
+                <div class="tables__chair tables__chair--4"></div>
+              </div>
+            </button>
+            <button class="tables__button tables__button--11">
+              <div class="tables__button-container tables__button-container--large">
+                <div class="tables__table tables__table--large">11</div>
+                <div class="tables__chair tables__chair--1"></div>
+                <div class="tables__chair tables__chair--2"></div>
+                <div class="tables__chair tables__chair--3"></div>
+                <div class="tables__chair tables__chair--4"></div>
+                <div class="tables__chair tables__chair--5"></div>
+                <div class="tables__chair tables__chair--6"></div>
+                <div class="tables__chair tables__chair--7"></div>
+              </div>
+            </button>
+          </div>
+          <div class="reservation__info">
+            <h4 class="reservation__legend">Стоимость пригласительного билета</h4>
+            <ul class="reservation__tables-info">
+              <li class="reservation__table-info reservation__table-info--black">1400 ₽ | 1 персона</li>
+              <li class="reservation__table-info reservation__table-info--red">1250 ₽ | 1 персона</li>
+            </ul>
+            <h4 class="reservation__legend reservation__legend--margin-top">Примечание</h4>
+            <ul class="reservation__notes">
+              <li class="reservation__note reservation__table-info--free">доступные места</li>
+              <li class="reservation__note reservation__table-info--busy">забронировано</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="page-footer"></footer>
+</body>
+
+</html>
