@@ -30,10 +30,10 @@ body {
   min-height: 100vh;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  font-weight: 400;
   color: #1f1e1e;
+  background-color: #DEDEDE;
   background: url('../assets/images/noise.png'), url('../assets/images/gradient.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .main {
   -webkit-box-flex: 1;
@@ -46,7 +46,7 @@ body {
           flex: 0 0 auto;
 }
 a {
-  color: #1F1E1E;
+  color: #1f1e1e;
   outline: none;
 }
 img {
@@ -54,6 +54,14 @@ img {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+button {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  color: #1f1e1e;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
 }
 .button {
   -webkit-box-sizing: border-box;
@@ -75,7 +83,6 @@ img {
 .button:hover {
   color: #ffffff;
   background: #1f1e1e;
-  cursor: pointer;
 }
 .breads__link {
   color: #1f1e1e;
@@ -84,10 +91,13 @@ img {
   transition: color 0.2;
 }
 .breads__link:hover {
-  color: #bc3324;
+  color: #BC3324;
 }
 .title {
-  width: 624px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 624px;
   height: 62px;
   margin: 0 auto 150px;
   display: -webkit-box;
@@ -109,11 +119,29 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: wrap;
-          flex-direction: wrap;
-  gap: 60px 120px;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  gap: 120px 60px;
+}
+.checkbox {
+  height: 24px;
+}
+.checkbox--red .checkbox__input:checked + .checkbox__label::before {
+  background-color: #A51505;
+  border-color: #A51505;
+  background-image: url("../assets/images/red_check.svg");
+}
+.checkbox--red .checkbox__label {
+  color: #BC3324;
+}
+.checkbox--red .checkbox__label::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #BC3324;
 }
 .checkbox__input {
   display: none;
@@ -124,15 +152,13 @@ img {
 }
 .checkbox__input:checked + .checkbox__label::before {
   background-color: #1f1e1e;
-}
-.checkbox__input:checked + .checkbox__label--red::before {
-  background-color: #a51505;
-  border-color: #a51505;
+  background-image: url("../assets/images/black_check.svg");
 }
 .checkbox__label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-right: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -147,18 +173,9 @@ img {
   width: 24px;
   height: 24px;
   border: 1px solid #1f1e1e;
-}
-.checkbox__label--red {
-  color: #bc3324;
-}
-.checkbox__label--red::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  border: 1px solid #bc3324;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .page-header {
   position: fixed;
@@ -231,7 +248,7 @@ img {
   transition: color 0.2s;
 }
 .page-header__nav-link:hover {
-  color: #bc3324;
+  color: #BC3324;
 }
 .page-header__user-button-container {
   width: 202px;
@@ -292,7 +309,10 @@ img {
   text-align: center;
 }
 .main-header__buttons {
-  width: 624px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 624px;
   margin: 0 auto;
 }
 .main-header__buttons-container {
@@ -312,12 +332,12 @@ img {
 }
 .main-header__button--red {
   color: #ffffff;
-  background: #bc3324;
-  border-color: #bc3324;
+  background: #BC3324;
+  border-color: #BC3324;
 }
 .main-header__button--red:hover {
-  background-color: #a51505;
-  border-color: #a51505;
+  background-color: #A51505;
+  border-color: #A51505;
 }
 .main-header__button--white {
   padding: 15px 43px;
@@ -338,10 +358,10 @@ img {
   text-transform: uppercase;
 }
 .events__event-card {
-  max-width: 405px;
-  width: calc(100% / 3 - 40px);
+  width: calc((100% / 3) - 40px);
 }
 .event-card__link {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -349,13 +369,12 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
   text-decoration: none;
   color: #1f1e1e;
 }
 .event-card__link:hover > .event-card__title {
-  color: #bc3324;
-  text-decoration-color: #bc3324;
+  color: #BC3324;
+  text-decoration-color: #BC3324;
 }
 .event-card__picture {
   position: relative;
@@ -495,7 +514,7 @@ img {
   display: block;
   width: 24px;
   height: 24px;
-  background: #bc3324;
+  background: #BC3324;
 }
 .reservation__table-info--red::before {
   content: "";
@@ -530,7 +549,7 @@ img {
   display: block;
   width: 24px;
   height: 24px;
-  border: 1px solid #bc3324;
+  border: 1px solid #BC3324;
   border-radius: 50%;
 }
 .reservation__table-info--busy::before {
@@ -541,7 +560,7 @@ img {
   display: block;
   width: 24px;
   height: 24px;
-  background: #bfbfbf;
+  background: #BFBFBF;
   border-radius: 50%;
 }
 .reservation__notes {
@@ -655,10 +674,10 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   color: #ffffff;
-  background-color: #bc3324;
-  border-color: #bc3324;
+  background-color: #BC3324;
+  border-color: #BC3324;
 }
 .reservation-form__button:hover {
-  background-color: #a51505;
-  border-color: #a51505;
+  background-color: #A51505;
+  border-color: #A51505;
 }
