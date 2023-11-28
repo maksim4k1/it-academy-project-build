@@ -34,6 +34,8 @@ body {
   color: #1f1e1e;
   background-color: #DEDEDE;
   background: url('../assets/images/noise.png'), url('../assets/images/gradient.png');
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
 }
 .main {
   -webkit-box-flex: 1;
@@ -305,7 +307,8 @@ button {
 }
 .main-header__image {
   max-width: 100%;
-  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
   text-align: center;
 }
 .main-header__buttons {
