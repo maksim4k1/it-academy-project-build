@@ -61,9 +61,78 @@ button {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
+  border: none;
   color: #1f1e1e;
   font-family: "Open Sans", sans-serif;
   cursor: pointer;
+}
+input,
+textarea,
+select {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  color: #1f1e1e;
+  font-family: "Open Sans", sans-serif;
+}
+textarea {
+  resize: none;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #6C6C6C;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #6C6C6C;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #6C6C6C;
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #6C6C6C;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #6C6C6C;
+}
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+input:focus::-ms-input-placeholder, textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+.x-button {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1f1e1e;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.x-button:hover {
+  background-color: #A51505;
+}
+.x-button__icon {
+  width: 24px;
+  height: 24px;
 }
 .button {
   -webkit-box-sizing: border-box;
@@ -71,6 +140,9 @@ button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 15px 40px;
   border: 1px solid #1f1e1e;
   font-family: inherit;
@@ -125,13 +197,76 @@ button {
       flex-flow: wrap;
   gap: 120px 60px;
 }
+.radio {
+  position: relative;
+  height: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.radio__input {
+  position: absolute !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+.radio__input:checked + .radio__label::after {
+  background-color: #1f1e1e;
+}
+.radio__label {
+  height: 22px;
+  padding-left: 49px;
+  cursor: pointer;
+}
+.radio__label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 0;
+  left: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 23px;
+  height: 23px;
+  border: 2px solid #1f1e1e;
+  border-radius: 50%;
+}
+.radio__label::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 5px;
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-color: transparent;
+  border-radius: 50%;
+}
 .checkbox {
   height: 24px;
 }
 .checkbox--red .checkbox__input:checked + .checkbox__label::before {
   background-color: #A51505;
   border-color: #A51505;
-  background-image: url("../assets/images/red_check.svg");
 }
 .checkbox--red .checkbox__label {
   color: #BC3324;
@@ -146,7 +281,17 @@ button {
   border: 1px solid #BC3324;
 }
 .checkbox__input {
-  display: none;
+  position: absolute !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 .checkbox__input:disabled + .checkbox__label {
   opacity: 0.5;
@@ -154,9 +299,12 @@ button {
 }
 .checkbox__input:checked + .checkbox__label::before {
   background-color: #1f1e1e;
-  background-image: url("../assets/images/black_check.svg");
+}
+.checkbox__input:checked + .checkbox__label::after {
+  opacity: 1;
 }
 .checkbox__label {
+  position: relative;
   margin-right: auto;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -168,9 +316,9 @@ button {
   cursor: pointer;
 }
 .checkbox__label::before {
+  content: "";
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  content: "";
   display: block;
   width: 24px;
   height: 24px;
@@ -178,6 +326,146 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-transition: background-color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.checkbox__label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.field {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.field__input,
+.field__textarea,
+.field__select {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 55px;
+  padding: 0 20px;
+  display: block;
+  color: #1f1e1e;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+.field__textarea {
+  height: 149px;
+  padding: 16.5px 20px;
+}
+.field__input--day {
+  width: 55px;
+  padding: 0 16px;
+}
+.field__input--month {
+  width: 55px;
+  padding: 0 13px;
+}
+.field__input--year {
+  width: 110px;
+  padding: 0 38px;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 180px);
+  padding: 90px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(28, 27, 27, 0.4);
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.2s, opacity 0.2s;
+  transition: visibility 0.2s, opacity 0.2s;
+}
+.modal::-webkit-scrollbar {
+  width: 7px;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.modal::-webkit-scrollbar-thumb {
+  background-color: rgba(28, 27, 27, 0.4);
+}
+.modal--opened {
+  visibility: visible;
+  opacity: 1;
+}
+.modal__wrapper {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 1210px;
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 110px 170px 40px;
+  background-color: #DEDEDE;
+  background-image: url("../assets/images/noise.png");
+  background-repeat: repeat;
+}
+.modal__x-button {
+  position: absolute;
+  top: -30px;
+  right: -33px;
+}
+.modal__title {
+  position: absolute;
+  top: -40px;
+  left: 84px;
+  width: 425px;
+  padding: 10px 85px;
+  font-family: "Lora", serif;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.44px;
+  text-transform: uppercase;
+  background-color: #1f1e1e;
 }
 .page-header {
   position: fixed;
@@ -345,23 +633,88 @@ button {
 .main-header__button--white {
   padding: 15px 43px;
 }
-.events__container {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  gap: 30px 60px;
+}
+.form__section {
+  width: calc(50% - 30px);
+}
+.form__section--full-width {
   width: 100%;
-  max-width: 1414px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 40px;
 }
-.events__title {
-  margin-top: 138px;
-  text-transform: uppercase;
+.form__subtitle {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 700;
 }
-.events__event-card {
-  width: calc((100% / 3) - 40px);
+.form__elements {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+.form__elements--radios {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+.form__elements--peoples {
+  margin-bottom: 30px;
+}
+.form__elements--date > .form__field {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.form__elements--data {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  gap: 30px 60px;
+}
+.form__field {
+  width: 100%;
+}
+.form__field--half {
+  width: calc(50% - 30px);
+}
+.form__buttons {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form__button {
+  width: 400px;
+}
+.form__button--inline {
+  width: 70px;
+  height: 30px;
+  padding: 0;
+  margin: 0 auto;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  -webkit-transition: color 0.2s, text-decoration-color 0.2s;
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+.form__button--inline:hover {
+  color: #A51505;
+  text-decoration-color: #A51505;
+  background-color: transparent;
 }
 .event-card__link {
   height: 100%;
@@ -388,7 +741,7 @@ button {
   content: "";
   display: block;
   width: 100%;
-  padding-top: 100%;
+  padding-top: 107.16%;
 }
 .event-card__picture-img {
   position: absolute;
@@ -417,7 +770,7 @@ button {
   margin: auto 0 0;
   font-size: 14px;
 }
-.event__container {
+.events__container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -428,8 +781,101 @@ button {
   padding-right: 40px;
   padding-top: 40px;
 }
-.event__reservation {
-  margin: 80px 0 0;
+.events__title {
+  margin-top: 138px;
+  text-transform: uppercase;
+}
+.events__event-card {
+  width: calc((100% / 3) - 40px);
+}
+.reservation-form__legend {
+  margin: 0 0 20px;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.reservation-form__legend--checkboxes {
+  margin: 0 0 30px;
+}
+.reservation-form__checkboxes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 10px;
+}
+.reservation-form__bilets {
+  margin: auto 0 0;
+}
+.reservation-form__bilets-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 15px;
+}
+.reservation-form__bilets-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reservation-form__price {
+  padding: 0 15px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.reservation-form__summ {
+  margin: 25px 0 53px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: calc(100px / 3);
+  font-size: 20px;
+  font-weight: 600;
+}
+.reservation-form__summ-item {
+  width: 100%;
+  text-align: right;
+}
+.reservation-form__summ-item--right {
+  text-align: left;
+}
+.reservation-form__button {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  background-color: #BC3324;
+  border-color: #BC3324;
+}
+.reservation-form__button:hover {
+  background-color: #A51505;
+  border-color: #A51505;
 }
 .reservation {
   display: grid;
@@ -595,92 +1041,30 @@ button {
   margin: 0 0 0 auto;
   font-size: 14px;
 }
-.reservation-form__legend {
-  margin: 0 0 20px;
-  padding: 0;
-  font-size: 18px;
-  font-weight: 700;
-}
-.reservation-form__legend--checkboxes {
-  margin: 0 0 30px;
-}
-.reservation-form__checkboxes-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  gap: 10px;
-}
-.reservation-form__bilets {
-  margin: auto 0 0;
-}
-.reservation-form__bilets-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  gap: 15px;
-}
-.reservation-form__bilets-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.reservation-form__price {
-  padding: 0 15px 0 0;
-  font-size: 18px;
-  font-weight: 600;
-}
-.reservation-form__summ {
-  margin: 25px 0 53px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: calc(100px / 3);
-  font-size: 20px;
-  font-weight: 600;
-}
-.reservation-form__summ-item {
+.event__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
-  text-align: right;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
 }
-.reservation-form__summ-item--right {
-  text-align: left;
+.event__reservation {
+  margin: 80px 0 0;
 }
-.reservation-form__button {
-  width: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #ffffff;
-  background-color: #BC3324;
-  border-color: #BC3324;
-}
-.reservation-form__button:hover {
-  background-color: #A51505;
-  border-color: #A51505;
+.is-hidden {
+  position: absolute !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }

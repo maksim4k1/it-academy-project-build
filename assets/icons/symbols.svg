@@ -144,4 +144,8 @@
         <path class="scene__table-num" d="M45.2 241h-3.917v-7.559c0-.918.02-1.757.059-2.519-.241.293-.54.599-.899.918l-1.62 1.338-2.003-2.461 4.903-3.994h3.476V241Zm11.718 0h-3.916v-7.559c0-.918.02-1.757.058-2.519a8.36 8.36 0 0 1-.898.918l-1.621 1.338-2.002-2.461 4.902-3.994h3.477V241Z" fill="#1F1E1E"/>
         <path opacity=".01" fill="transparent" d="M0 185h95v121H0z"/>
     </g>
+</g></symbol><symbol id="x" viewBox="0 0 24 24"><g fill="none">
+    <g stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6 6 18M6 6l12 12"/>
+    </g>
 </g></symbol></svg>
