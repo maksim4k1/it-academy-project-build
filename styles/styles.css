@@ -1612,6 +1612,9 @@ textarea:focus::placeholder {
   height: 84px;
   vertical-align: middle;
 }
+.table__head > .table__row:first-child {
+  background-color: transparent;
+}
 .table__head-title {
   font-size: 18px;
   font-weight: 600;
@@ -1636,6 +1639,10 @@ textarea:focus::placeholder {
 }
 .table__foot {
   height: 60px;
+}
+.table__foot > .table__row:first-child {
+  background-color: transparent;
+  border: none;
 }
 .table__ok {
   position: relative;

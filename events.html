@@ -50,7 +50,7 @@
               </picture>
               <h3 class="event-card__title">Собираемся и слушаем альбом Nirvana. Nirvana</h3>
               <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
-              <datetime datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</datetime>
+              <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
             </a>
           </article>
           <article class="events__event-card event-card">
@@ -60,7 +60,7 @@
               </picture>
               <h3 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h3>
               <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
-              <datetime datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</datetime>
+              <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
             </a>
           </article>
           <article class="events__event-card event-card">
@@ -70,7 +70,7 @@
               </picture>
               <h3 class="event-card__title">Вечер | The Best of Sade</h3>
               <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
-              <datetime datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</datetime>
+              <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
             </a>
           </article>
           <article class="events__event-card event-card">
@@ -80,7 +80,7 @@
               </picture>
               <h3 class="event-card__title">Выставка Малевича в Томске</h3>
               <p class="event-card__description">Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.</p>
-              <datetime datetime="2022-12-23T20:00" class="event-card__time">23.12.2022 | начало 20.00</datetime>
+              <time datetime="2022-12-23T20:00" class="event-card__time">23.12.2022 | начало 20.00</time>
             </a>
           </article>
           <article class="events__event-card event-card">
@@ -90,7 +90,7 @@
               </picture>
               <h3 class="event-card__title">Мастер — класс по студийной съемке от Tatler</h3>
               <p class="event-card__description">Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.</p>
-              <datetime datetime="2022-12-25T13:00" class="event-card__time">25.12.2022 | начало 13.00</datetime>
+              <time datetime="2022-12-25T13:00" class="event-card__time">25.12.2022 | начало 13.00</time>
             </a>
           </article>
           <article class="events__event-card event-card">
@@ -100,7 +100,7 @@
               </picture>
               <h3 class="event-card__title">Повесилимся на славу на концерте The Hatters</h3>
               <p class="event-card__description">Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко</p>
-              <datetime datetime="2022-12-27T10:00" class="event-card__time">27.12.2022 | начало 10.00</datetime>
+              <time datetime="2022-12-27T10:00" class="event-card__time">27.12.2022 | начало 10.00</time>
             </a>
           </article>
         </div>
@@ -122,17 +122,17 @@
 
         <table class="services__table table">
           <colgroup class="table__colgroup table__colgroup--first" span="1"></colgroup>
-          <colgroup class="table__colgroup" span="3">
-            <col class="table__col">
-            <col class="table__col">
-            <col class="table__col">
+          <colgroup class="table__colgroup">
+            <col class="table__col" span="3">
           </colgroup>
 
           <thead class="table__head">
-            <th class="table__head-title"></th>
-            <th class="table__head-title">Тариф «Light»</th>
-            <th class="table__head-title">Тариф «Promo»</th>
-            <th class="table__head-title">Тариф «All stars»</th>
+            <tr class="table__row">
+              <th class="table__head-title"></th>
+              <th class="table__head-title">Тариф «Light»</th>
+              <th class="table__head-title">Тариф «Promo»</th>
+              <th class="table__head-title">Тариф «All stars»</th>
+            </tr>
           </thead>
 
           <tbody class="table__body">
@@ -227,10 +227,12 @@
           </tbody>
 
           <tfoot class="table__foot">
-            <td class="table__data"></td>
-            <td class="table__data"></td>
-            <td class="table__data"></td>
-            <td class="table__data"></td>
+            <tr class="table__row">
+              <td class="table__data"></td>
+              <td class="table__data"></td>
+              <td class="table__data"></td>
+              <td class="table__data"></td>
+            </tr>
           </tfoot>
         </table>
 
@@ -320,13 +322,13 @@
               <h4 class="form__subtitle">Дата проведения:</h4>
               <div class="form__elements form__elements--date">
                 <label class="form__field field">
-                  <input type="text" class="field__input field__input--day" placeholder="ДД">
+                  <input type="text" name="day" class="field__input field__input--day" placeholder="ДД">
                 </label>
                 <label class="form__field field">
-                  <input type="text" class="field__input field__input--month" placeholder="ММ">
+                  <input type="text" name="month" class="field__input field__input--month" placeholder="ММ">
                 </label>
                 <label class="form__field field">
-                  <input type="text" class="field__input field__input--year" placeholder="ГГГГ">
+                  <input type="text" name="year" class="field__input field__input--year" placeholder="ГГГГ">
                 </label>
               </div>
             </div>
@@ -336,19 +338,19 @@
               <div class="form__elements form__elements--data">
                 <label class="form__field form__field--half field">
                   <span class="field__label">Имя*</span>
-                  <input type="text" class="field__input" placeholder="Имя">
+                  <input type="text" name="name" class="field__input" placeholder="Имя">
                 </label>
                 <label class="form__field form__field--half field">
                   <span class="field__label">Фамилия*</span>
-                  <input type="text" class="field__input" placeholder="Фамилия">
+                  <input type="text" name="surname" class="field__input" placeholder="Фамилия">
                 </label>
                 <label class="form__field form__field--half field">
                   <span class="field__label">Телефон*</span>
-                  <input type="text" class="field__input" placeholder="+7 (___) ___ __ __">
+                  <input type="text" name="phone" class="field__input" placeholder="+7 (___) ___ __ __">
                 </label>
                 <label class="form__field form__field--half field">
                   <span class="field__label">Email*</span>
-                  <input type="text" class="field__input" placeholder="Email">
+                  <input type="text" name="email" class="field__input" placeholder="Email">
                 </label>
               </div>
             </div>
@@ -356,7 +358,7 @@
             <div class="form__section form__section--full-width">
               <h4 class="form__subtitle">Есть пожелания? Напишите нам:</h4>
               <label class="form__field field">
-                <input type="textarea" class="field__textarea">
+                <textarea name="comments" class="field__textarea"></textarea>
               </label>
             </div>
 
@@ -387,11 +389,11 @@
         </nav>
 
         <form class="page-footer__form">
-          <label class="page-footer__form-label">
+          <div class="page-footer__form-label">
             <span class="page-footer__form-span">Подпишись и будь в курсе происходящего</span>
             <input type="text" class="page-footer__form-input" placeholder="Email" />
             <button class="page-footer__form-button" type="submit">Подписаться</button>
-          </label>
+          </div>
           <label class="checkbox page-footer__checkbox">
             <input type="checkbox" name="subscribe" class="checkbox__input" checked />
             <span class="checkbox__label">Согласен на обработку персональных данных</span>
