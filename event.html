@@ -43,7 +43,7 @@
           <a href="./events.html" class="event__breads-link breads__link">Мероприятия</a> / Вечер | The Best of Sade
         </div>
         <section class="event__reservation reservation">
-          <div class="reservation__form reservation-form">
+          <form class="reservation__form reservation-form">
             <h4 class="reservation-form__legend reservation-form__legend--checkboxes reservation__legend">Забронировать столик</h4>
             <div class="reservation-form__checkboxes-list">
               <div class="checkbox reservation-form__table checkbox--red">
@@ -93,23 +93,23 @@
             </div>
             <div class="reservation-form__bilets">
               <h4 class="reservation-form__legend reservation-form__legend--bilets reservation__legend">Ваши пригласительные билеты</h4>
-              <ul class="reservation-form__bilets-list">
-                <li class="reservation-form__bilets-item">
+              <div class="reservation-form__bilets-list">
+                <div class="reservation-form__bilets-item">
                   <div class="reservation-form__count">9 шт. | 1400</div>
                   <div class="reservation-form__price">12 600</div>
-                </li>
-                <li class="reservation-form__bilets-item">
+                </div>
+                <div class="reservation-form__bilets-item">
                   <div class="reservation-form__count">4 шт. | 1250</div>
                   <div class="reservation-form__price">5000</div>
-                </li>
-              </ul>
+                </div>
+              </div>
               <div class="reservation-form__summ">
                 <div class="reservation-form__summ-item">Сумма</div>
                 <div class="reservation-form__summ-item reservation-form__summ-item--right">17 600</div>
               </div>
               <button class="reservation-form__button button">Купить билеты</button>
             </div>
-          </div>
+          </form>
           <div class="reservation__scene-container">
             <h4 class="reservation__scene-title title">Сцена</h4>
             <svg class="reservation__scene">
@@ -118,15 +118,15 @@
           </div>
           <div class="reservation__info">
             <h4 class="reservation__legend">Стоимость пригласительного билета</h4>
-            <ul class="reservation__tables-info">
-              <li class="reservation__table-info reservation__table-info--black">1400 ₽ | 1 персона</li>
-              <li class="reservation__table-info reservation__table-info--red">1250 ₽ | 1 персона</li>
-            </ul>
+            <div class="reservation__tables-info">
+              <div class="reservation__table-info reservation__table-info--black">1400 ₽ | 1 персона</div>
+              <div class="reservation__table-info reservation__table-info--red">1250 ₽ | 1 персона</div>
+            </div>
             <h4 class="reservation__legend reservation__legend--margin-top">Примечание</h4>
-            <ul class="reservation__notes">
-              <li class="reservation__note reservation__table-info--free">доступные места</li>
-              <li class="reservation__note reservation__table-info--busy">забронировано</li>
-            </ul>
+            <div class="reservation__notes">
+              <div class="reservation__note reservation__table-info--free">доступные места</div>
+              <div class="reservation__note reservation__table-info--busy">забронировано</div>
+            </div>
           </div>
         </section>
       </div>

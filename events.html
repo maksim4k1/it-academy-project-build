@@ -15,6 +15,108 @@
 </head>
 
 <body>
+  <div class="modal" id="modal">
+    <div class="modal__wrapper">
+      <button class="modal__x-button x-button" id="close-modal-button"></button>
+
+      <div class="modal__container">
+        <h2 class="modal__title">Заполните форму
+          <br />и мы подберем площадку
+        </h2>
+        <form class="modal__form form">
+          <div class="form__section">
+            <h4 class="form__subtitle">Формат мероприятия:</h4>
+            <div class="form__elements form__elements--radios">
+              <div class="radio form__radio">
+                <input type="radio" class="radio__input" name="type" id="1" checked />
+                <label for="1" class="radio__label">Мастер-класс/семинар</label>
+              </div>
+              <div class="radio form__radio">
+                <input type="radio" class="radio__input" name="type" id="2" />
+                <label for="2" class="radio__label">Концерт/выступление</label>
+              </div>
+              <div class="radio form__radio">
+                <input type="radio" class="radio__input" name="type" id="3" />
+                <label for="3" class="radio__label">Выставка/показ</label>
+              </div>
+              <div class="radio form__radio">
+                <input type="radio" class="radio__input" name="type" id="4" />
+                <label for="4" class="radio__label">Другое</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__section">
+            <h4 class="form__subtitle">Планируемое количество посетителей:</h4>
+            <div class="form__elements form__elements--peoples">
+              <label class="form__field field">
+                <select class="field__select" name="people">
+                  <option value="0-20" selected>до 20 человек</option>
+                  <option value="20-100">от 20 до 100 человек</option>
+                  <option value="100-500">от 100 до 500 человек</option>
+                  <option value="500">более 500 человек</option>
+                </select>
+              </label>
+            </div>
+
+            <h4 class="form__subtitle">Дата проведения:</h4>
+            <div class="form__elements form__elements--date">
+              <label class="form__field field">
+                <input type="text" class="field__input field__input--day" placeholder="ДД">
+              </label>
+              <label class="form__field field">
+                <input type="text" class="field__input field__input--month" placeholder="ММ">
+              </label>
+              <label class="form__field field">
+                <input type="text" class="field__input field__input--year" placeholder="ГГГГ">
+              </label>
+            </div>
+          </div>
+
+          <div class="form__section form__section--full-width">
+            <h4 class="form__subtitle">Контактные данные:</h4>
+            <div class="form__elements form__elements--data">
+              <label class="form__field form__field--half field">
+                <span class="field__label">Имя*</span>
+                <input type="text" class="field__input" placeholder="Имя">
+              </label>
+              <label class="form__field form__field--half field">
+                <span class="field__label">Фамилия*</span>
+                <input type="text" class="field__input" placeholder="Фамилия">
+              </label>
+              <label class="form__field form__field--half field">
+                <span class="field__label">Телефон*</span>
+                <input type="text" class="field__input" placeholder="+7 (___) ___ __ __">
+              </label>
+              <label class="form__field form__field--half field">
+                <span class="field__label">Email*</span>
+                <input type="text" class="field__input" placeholder="Email">
+              </label>
+            </div>
+          </div>
+
+          <div class="form__section form__section--full-width">
+            <h4 class="form__subtitle">Есть пожелания? Напишите нам:</h4>
+            <label class="form__field field">
+              <input type="textarea" class="field__textarea">
+            </label>
+          </div>
+
+          <div class="form__section form__section--full-width">
+            <div class="checkbox ">
+              <input type="checkbox" name="accept" id="accept" class="checkbox__input" checked />
+              <label class="checkbox__label" for="accept">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</label>
+            </div>
+          </div>
+
+          <div class="form__buttons form__section--full-width">
+            <button class="form__button button" type="submit">Отправить</button>
+            <button class="form__button form__button--inline button" type="button" id="close-modal-form-button">Закрыть</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   <header class="page-header">
     <div class="page-header__container">
       <a href="./index.html" class="page-header__logo">
@@ -36,7 +138,7 @@
     </div>
   </header>
   <main class="main">
-    <div class="events">
+    <section class="events">
       <div class="events__container">
         <div class="events__breads breads">
           <a href="./" class="events__breads-link breads__link">Главная</a> / Мероприятия
@@ -104,10 +206,177 @@
             </a>
           </article>
         </div>
+        <button class="events__button">
+          <span class="events__button-title">Показать еще</span>
+          <svg class="events__button-icon">
+            <use id="s" xlink:href="./assets/icons/symbols.svg#arrow"></use>
+          </svg>
+        </button>
       </div>
-    </div>
+    </section>
+    <section class="services">
+      <div class="services__container">
+        <h2 class="services__title title">дополнительные услуги</h2>
+        <p class="services__label">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что
+          <br />все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная
+          <br />работа, результатом которой будет проведение вашего мероприятия на высшем уровне.
+        </p>
+
+        <table class="services__table table">
+          <colgroup class="table__colgroup table__colgroup--first" span="1"></colgroup>
+          <colgroup class="table__colgroup" span="3">
+            <col class="table__col">
+            <col class="table__col">
+            <col class="table__col">
+          </colgroup>
+
+          <thead class="table__head">
+            <th class="table__head-title"></th>
+            <th class="table__head-title">Тариф «Light»</th>
+            <th class="table__head-title">Тариф «Promo»</th>
+            <th class="table__head-title">Тариф «All stars»</th>
+          </thead>
+
+          <tbody class="table__body">
+            <tr class="table__row">
+              <th class="table__row-title">Стоимость за час</th>
+              <td class="table__data">1 000 ₽</td>
+              <td class="table__data">3 000 ₽</td>
+              <td class="table__data">от 6 000 ₽</td>
+            </tr>
+
+            <tr class="table__row">
+              <th class="table__row-title">Ведущий мероприятия</th>
+              <td class="table__data"></td>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <th class="table__row-title">Фотосъемка</th>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <th class="table__row-title">Видеосъемка</th>
+              <td class="table__data"></td>
+              <td class="table__data"></td>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <th class="table__row-title">Организация питания</th>
+              <td class="table__data"></td>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <th class="table__row-title">Декор</th>
+              <td class="table__data"></td>
+              <td class="table__data"></td>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <th class="table__row-title">Звуковое сопровождение</th>
+              <td class="table__data"></td>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <th class="table__row-title">Дополнительное освещение</th>
+              <td class="table__data"></td>
+              <td class="table__data"></td>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+
+            <tr class="table__row">
+              <th class="table__row-title">Клининг</th>
+              <td class="table__data"></td>
+              <td class="table__data"></td>
+              <td class="table__data">
+                <span class="table__ok"></span>
+              </td>
+            </tr>
+          </tbody>
+
+          <tfoot class="table__foot">
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+            <td class="table__data"></td>
+          </tfoot>
+        </table>
+
+        <div class="services__buttons action">
+          <div class="action__title">Я хочу:</div>
+          <div class="action__container">
+            <button class="action__button action__button--red button" id="open-modal-button">Провести мероприятие</button>
+            <button class="action__button action__button--white button">Стать арендатором</button>
+          </div>
+        </div>
+
+        <div class="services__info">
+          <div class="services__info-item">
+            <picture class="services__info-picture">
+              <img src="./assets/images/information.svg" alt="Цены" class="services__info-icon">
+            </picture>
+            <h6 class="services__info-subtitle">Цены</h6>
+            <p class="services__info-data">Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом.</p>
+          </div>
+          <div class="services__info-item">
+            <picture class="services__info-picture">
+              <img src="./assets/images/contact.svg" alt="Контакты" class="services__info-icon">
+            </picture>
+            <h6 class="services__info-subtitle">Контакты</h6>
+            <p class="services__info-data">Отдел организации мероприятий
+              <br />+7 499 350 0730
+              <br />hi@tagree.ru
+            </p>
+          </div>
+          <div class="services__info-item">
+            <picture class="services__info-picture">
+              <img src="./assets/images/handshake.svg" alt="Преимущество" class="services__info-icon">
+            </picture>
+            <h6 class="services__info-subtitle">Преимущество</h6>
+            <p class="services__info-data">Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым талантам, так и большим корпорациям и холдингам.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
   <footer class="page-footer"></footer>
+
+  <script src="./scripts/modal.js"></script>
 </body>
 
 </html>

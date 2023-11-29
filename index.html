@@ -15,51 +15,9 @@
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="page-header__container">
-      <a href="./index.html" class="page-header__logo">
-        <svg class="page-header__logo-icon">
-          <use xlink:href="assets/icons/symbols.svg#logo"></use>
-        </svg>
-      </a>
-
-      <nav class="page-header__nav">
-        <a href="./events.html" class="page-header__nav-link">Мероприятия</a>
-        <a href="#" class="page-header__nav-link">Блог</a>
-        <a href="#" class="page-header__nav-link">О нас</a>
-        <a href="#" class="page-header__nav-link">Контакты</a>
-      </nav>
-
-      <div class="page-header__user-button-container">
-        <a href="#" class="button page-header__user-button">Войти</a>
-      </div>
-    </div>
-  </header>
-  <header class="main-header home__main-header">
-    <h1 class="main-header__title">арт — пространство</h1>
-    <picture class="main-header__picture">
-      <img src="./assets/images/lenni.svg" alt="LENNI" class="main-header__image">
-    </picture>
-    <p class="main-header__text">для людей, горящих сердцем и делом
-      <br />место для настоящего
-    </p>
-
-    <div class="main-header__buttons">
-      <div class="main-header__buttons-title">Я хочу:</div>
-      <div class="main-header__buttons-container">
-        <button class="main-header__button main-header__button--red button" id="open-modal-button">Провести мероприятие</button>
-        <button class="main-header__button main-header__button--white button">Стать арендатором</button>
-      </div>
-    </div>
-  </header>
-
   <div class="modal" id="modal">
     <div class="modal__wrapper">
-      <button class="modal__x-button x-button" id="close-modal-button">
-        <svg class="x-button__icon">
-          <use xlink:href="./assets/icons/symbols.svg#x"></use>
-        </svg>
-      </button>
+      <button class="modal__x-button x-button" id="close-modal-button"></button>
 
       <div class="modal__container">
         <h2 class="modal__title">Заполните форму
@@ -159,6 +117,43 @@
       </div>
     </div>
   </div>
+  <header class="page-header">
+    <div class="page-header__container">
+      <a href="./index.html" class="page-header__logo">
+        <svg class="page-header__logo-icon">
+          <use xlink:href="assets/icons/symbols.svg#logo"></use>
+        </svg>
+      </a>
+
+      <nav class="page-header__nav">
+        <a href="./events.html" class="page-header__nav-link">Мероприятия</a>
+        <a href="#" class="page-header__nav-link">Блог</a>
+        <a href="#" class="page-header__nav-link">О нас</a>
+        <a href="#" class="page-header__nav-link">Контакты</a>
+      </nav>
+
+      <div class="page-header__user-button-container">
+        <a href="#" class="button page-header__user-button">Войти</a>
+      </div>
+    </div>
+  </header>
+  <header class="main-header home__main-header">
+    <h1 class="main-header__title">арт — пространство</h1>
+    <picture class="main-header__picture">
+      <img src="./assets/images/lenni.svg" alt="LENNI" class="main-header__image">
+    </picture>
+    <p class="main-header__text">для людей, горящих сердцем и делом
+      <br />место для настоящего
+    </p>
+
+    <div class="main-header__buttons action">
+      <div class="action__title">Я хочу:</div>
+      <div class="action__container">
+        <button class="action__button action__button--red button" id="open-modal-button">Провести мероприятие</button>
+        <button class="action__button action__button--white button">Стать арендатором</button>
+      </div>
+    </div>
+  </header>
 
   <main class="main">
     <div class="home">
