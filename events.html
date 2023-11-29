@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/styles.min.css">
 
   <title>LENNI ART</title>
 </head>
@@ -46,7 +46,7 @@
           <article class="events__event-card event-card">
             <a href="./event.html" class="event-card__link">
               <picture class="event-card__picture">
-                <img src="./assets/images/Nirvana.png" alt="Nirvana" class="event-card__picture-img" />
+                <img src="./assets/images/nirvana.jpg" alt="nirvana" class="event-card__picture-img" />
               </picture>
               <h3 class="event-card__title">Собираемся и слушаем альбом Nirvana. Nirvana</h3>
               <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
@@ -56,7 +56,7 @@
           <article class="events__event-card event-card">
             <a href="./event.html" class="event-card__link">
               <picture class="event-card__picture">
-                <img src="./assets/images/Image.png" alt="HowStuffWorks" class="event-card__picture-img" />
+                <img src="./assets/images/stuff.jpg" alt="HowStuffWorks" class="event-card__picture-img" />
               </picture>
               <h3 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h3>
               <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
@@ -66,7 +66,7 @@
           <article class="events__event-card event-card">
             <a href="./event.html" class="event-card__link">
               <picture class="event-card__picture">
-                <img src="./assets/images/Sade.png" alt="Sade" class="event-card__picture-img" />
+                <img src="./assets/images/sade.jpg" alt="sade" class="event-card__picture-img" />
               </picture>
               <h3 class="event-card__title">Вечер | The Best of Sade</h3>
               <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
@@ -76,7 +76,7 @@
           <article class="events__event-card event-card">
             <a href="./event.html" class="event-card__link">
               <picture class="event-card__picture">
-                <img src="./assets/images/malevich.png" alt="Выставка картин малевича" class="event-card__picture-img" />
+                <img src="./assets/images/malevich.jpg" alt="Выставка картин малевича" class="event-card__picture-img" />
               </picture>
               <h3 class="event-card__title">Выставка Малевича в Томске</h3>
               <p class="event-card__description">Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.</p>
@@ -86,7 +86,7 @@
           <article class="events__event-card event-card">
             <a href="./event.html" class="event-card__link">
               <picture class="event-card__picture">
-                <img src="./assets/images/tatler.png" alt="Мастер класс" class="event-card__picture-img" />
+                <img src="./assets/images/tatler.jpg" alt="Мастер класс" class="event-card__picture-img" />
               </picture>
               <h3 class="event-card__title">Мастер — класс по студийной съемке от Tatler</h3>
               <p class="event-card__description">Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.</p>
@@ -96,7 +96,7 @@
           <article class="events__event-card event-card">
             <a href="./event.html" class="event-card__link">
               <picture class="event-card__picture">
-                <img src="./assets/images/hatters.png" alt="Концерт" class="event-card__picture-img" />
+                <img src="./assets/images/hatters.jpg" alt="Концерт" class="event-card__picture-img" />
               </picture>
               <h3 class="event-card__title">Повесилимся на славу на концерте The Hatters</h3>
               <p class="event-card__description">Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко</p>
@@ -285,22 +285,22 @@
             <div class="form__section">
               <h4 class="form__subtitle">Формат мероприятия:</h4>
               <div class="form__elements form__elements--radios">
-                <div class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" id="1" checked />
-                  <label for="1" class="radio__label">Мастер-класс/семинар</label>
-                </div>
-                <div class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" id="2" />
-                  <label for="2" class="radio__label">Концерт/выступление</label>
-                </div>
-                <div class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" id="3" />
-                  <label for="3" class="radio__label">Выставка/показ</label>
-                </div>
-                <div class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" id="4" />
-                  <label for="4" class="radio__label">Другое</label>
-                </div>
+                <label class="radio form__radio">
+                  <input type="radio" class="radio__input" name="type" checked />
+                  <span class="radio__label">Мастер-класс/семинар</span>
+                </label>
+                <label class="radio form__radio">
+                  <input type="radio" class="radio__input" name="type" />
+                  <span class="radio__label">Концерт/выступление</span>
+                </label>
+                <label class="radio form__radio">
+                  <input type="radio" class="radio__input" name="type" />
+                  <span class="radio__label">Выставка/показ</span>
+                </label>
+                <label class="radio form__radio">
+                  <input type="radio" class="radio__input" name="type" />
+                  <span class="radio__label">Другое</span>
+                </label>
               </div>
             </div>
 
@@ -361,10 +361,10 @@
             </div>
 
             <div class="form__section form__section--full-width">
-              <div class="checkbox ">
-                <input type="checkbox" name="accept" id="accept" class="checkbox__input" checked />
-                <label class="checkbox__label" for="accept">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</label>
-              </div>
+              <label class="checkbox form__checkbox">
+                <input type="checkbox" name="accept" class="checkbox__input" checked />
+                <span class="checkbox__label">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
+              </label>
             </div>
 
             <div class="form__buttons form__section--full-width">
@@ -379,7 +379,7 @@
     <div class="page-footer__container">
       <div class="page-footer__main">
         <nav class="page-footer__nav">
-          <a href="/events.html" class="page-footer__link">Календарь мероприятий</a>
+          <a href="./events.html" class="page-footer__link">Календарь мероприятий</a>
           <button class="page-footer__button" id="open-modal-footer-button">Провести мероприятие</button>
           <a href="#" class="page-footer__link">Стать арендатором</a>
           <a href="#" class="page-footer__link">Наши проекты</a>
@@ -392,10 +392,10 @@
             <input type="text" class="page-footer__form-input" placeholder="Email" />
             <button class="page-footer__form-button" type="submit">Подписаться</button>
           </label>
-          <div class="checkbox page-footer__checkbox">
-            <input type="checkbox" name="subscribe" id="subscribe" class="checkbox__input" checked />
-            <label class="checkbox__label" for="subscribe">Согласен на обработку персональных данных</label>
-          </div>
+          <label class="checkbox page-footer__checkbox">
+            <input type="checkbox" name="subscribe" class="checkbox__input" checked />
+            <span class="checkbox__label">Согласен на обработку персональных данных</span>
+          </label>
         </form>
       </div>
 

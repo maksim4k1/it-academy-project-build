@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/styles.min.css">
 
   <title>LENNI ART</title>
 </head>
@@ -46,50 +46,50 @@
           <form class="reservation__form reservation-form">
             <h4 class="reservation-form__legend reservation-form__legend--checkboxes reservation__legend">Забронировать столик</h4>
             <div class="reservation-form__checkboxes-list">
-              <div class="checkbox reservation-form__table checkbox--red">
-                <input type="checkbox" name="tableNum" id="1" class="checkbox__input" />
-                <label class="checkbox__label" for="1">1 стол</label>
-              </div>
-              <div class="checkbox reservation-form__table">
-                <input type="checkbox" name="tableNum" id="2" class="checkbox__input" />
-                <label class="checkbox__label" for="2">2 стол</label>
-              </div>
-              <div class="checkbox reservation-form__table">
-                <input type="checkbox" name="tableNum" id="3" class="checkbox__input" />
-                <label class="checkbox__label" for="3">3 стол</label>
-              </div>
-              <div class="checkbox reservation-form__table checkbox--red">
-                <input type="checkbox" name="tableNum" id="4" class="checkbox__input" />
-                <label class="checkbox__label" for="4">4 стол</label>
-              </div>
-              <div class="checkbox reservation-form__table">
-                <input type="checkbox" name="tableNum" id="5" class="checkbox__input" />
-                <label class="checkbox__label" for="5">5 стол</label>
-              </div>
-              <div class="checkbox reservation-form__table">
-                <input type="checkbox" name="tableNum" id="6" class="checkbox__input" />
-                <label class="checkbox__label" for="6">6 стол</label>
-              </div>
-              <div class="checkbox reservation-form__table checkbox--red">
-                <input type="checkbox" name="tableNum" id="7" class="checkbox__input" />
-                <label class="checkbox__label" for="7">7 стол</label>
-              </div>
-              <div class="checkbox reservation-form__table checkbox--red">
-                <input type="checkbox" name="tableNum" id="8" class="checkbox__input" />
-                <label class="checkbox__label" for="8">8 стол</label>
-              </div>
-              <div class="checkbox reservation-form__table checkbox--red">
-                <input type="checkbox" name="tableNum" id="9" class="checkbox__input" />
-                <label class="checkbox__label" for="9">9 стол</label>
-              </div>
-              <div class="checkbox reservation-form__table">
-                <input type="checkbox" name="tableNum" id="10" class="checkbox__input" />
-                <label class="checkbox__label" for="10">10 стол</label>
-              </div>
-              <div class="checkbox reservation-form__table">
-                <input type="checkbox" name="tableNum" id="11" class="checkbox__input" />
-                <label class="checkbox__label" for="11">11 стол</label>
-              </div>
+              <label class="checkbox reservation-form__table checkbox--red">
+                <input type="checkbox" name="tableNum" class="checkbox__input" />
+                <span class="checkbox__label">1 стол</span>
+              </label>
+              <label class="checkbox reservation-form__table">
+                <input type="checkbox" name="tableNum" class="checkbox__input" />
+                <span class="checkbox__label">2 стол</span>
+              </label>
+              <label class="checkbox reservation-form__table">
+                <input type="checkbox" name="tableNum" class="checkbox__input" />
+                <span class="checkbox__label">3 стол</span>
+              </label>
+              <label class="checkbox reservation-form__table checkbox--red">
+                <input type="checkbox" name="tableNum" class="checkbox__input" />
+                <span class="checkbox__label">4 стол</span>
+              </label>
+              <label class="checkbox reservation-form__table">
+                <input type="checkbox" name="tableNum" class="checkbox__input" />
+                <span class="checkbox__label">5 стол</span>
+              </label>
+              <label class="checkbox reservation-form__table">
+                <input type="checkbox" name="tableNum" class="checkbox__input" />
+                <span class="checkbox__label">6 стол</span>
+              </label>
+              <label class="checkbox reservation-form__table checkbox--red">
+                <input type="checkbox" name="tableNum" class="checkbox__input" />
+                <span class="checkbox__label">7 стол</span>
+              </label>
+              <label class="checkbox reservation-form__table checkbox--red">
+                <input type="checkbox" name="tableNum" class="checkbox__input" />
+                <span class="checkbox__label">8 стол</span>
+              </label>
+              <label class="checkbox reservation-form__table checkbox--red">
+                <input type="checkbox" name="tableNum" class="checkbox__input" />
+                <span class="checkbox__label">9 стол</span>
+              </label>
+              <label class="checkbox reservation-form__table">
+                <input type="checkbox" name="tableNum" class="checkbox__input" />
+                <span class="checkbox__label">10 стол</span>
+              </label>
+              <label class="checkbox reservation-form__table">
+                <input type="checkbox" name="tableNum" class="checkbox__input" />
+                <span class="checkbox__label">11 стол</span>
+              </label>
             </div>
             <div class="reservation-form__bilets">
               <h4 class="reservation-form__legend reservation-form__legend--bilets reservation__legend">Ваши пригласительные билеты</h4>
@@ -145,22 +145,22 @@
             <div class="form__section">
               <h4 class="form__subtitle">Формат мероприятия:</h4>
               <div class="form__elements form__elements--radios">
-                <div class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" id="1" checked />
-                  <label for="1" class="radio__label">Мастер-класс/семинар</label>
-                </div>
-                <div class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" id="2" />
-                  <label for="2" class="radio__label">Концерт/выступление</label>
-                </div>
-                <div class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" id="3" />
-                  <label for="3" class="radio__label">Выставка/показ</label>
-                </div>
-                <div class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" id="4" />
-                  <label for="4" class="radio__label">Другое</label>
-                </div>
+                <label class="radio form__radio">
+                  <input type="radio" class="radio__input" name="type" checked />
+                  <span class="radio__label">Мастер-класс/семинар</span>
+                </label>
+                <label class="radio form__radio">
+                  <input type="radio" class="radio__input" name="type" />
+                  <span class="radio__label">Концерт/выступление</span>
+                </label>
+                <label class="radio form__radio">
+                  <input type="radio" class="radio__input" name="type" />
+                  <span class="radio__label">Выставка/показ</span>
+                </label>
+                <label class="radio form__radio">
+                  <input type="radio" class="radio__input" name="type" />
+                  <span class="radio__label">Другое</span>
+                </label>
               </div>
             </div>
 
@@ -221,10 +221,10 @@
             </div>
 
             <div class="form__section form__section--full-width">
-              <div class="checkbox ">
-                <input type="checkbox" name="accept" id="accept" class="checkbox__input" checked />
-                <label class="checkbox__label" for="accept">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</label>
-              </div>
+              <label class="checkbox form__checkbox">
+                <input type="checkbox" name="accept" class="checkbox__input" checked />
+                <span class="checkbox__label">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
+              </label>
             </div>
 
             <div class="form__buttons form__section--full-width">
@@ -239,7 +239,7 @@
     <div class="page-footer__container">
       <div class="page-footer__main">
         <nav class="page-footer__nav">
-          <a href="/events.html" class="page-footer__link">Календарь мероприятий</a>
+          <a href="./events.html" class="page-footer__link">Календарь мероприятий</a>
           <button class="page-footer__button" id="open-modal-footer-button">Провести мероприятие</button>
           <a href="#" class="page-footer__link">Стать арендатором</a>
           <a href="#" class="page-footer__link">Наши проекты</a>
@@ -252,10 +252,10 @@
             <input type="text" class="page-footer__form-input" placeholder="Email" />
             <button class="page-footer__form-button" type="submit">Подписаться</button>
           </label>
-          <div class="checkbox page-footer__checkbox">
-            <input type="checkbox" name="subscribe" id="subscribe" class="checkbox__input" checked />
-            <label class="checkbox__label" for="subscribe">Согласен на обработку персональных данных</label>
-          </div>
+          <label class="checkbox page-footer__checkbox">
+            <input type="checkbox" name="subscribe" class="checkbox__input" checked />
+            <span class="checkbox__label">Согласен на обработку персональных данных</span>
+          </label>
         </form>
       </div>
 
