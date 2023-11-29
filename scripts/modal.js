@@ -2,6 +2,7 @@ const modalEl = document.getElementById("modal");
 const closeModalFormButtonEl = document.getElementById("close-modal-form-button");
 const closeModalButtonEl = document.getElementById("close-modal-button");
 const openModalButtonEl = document.getElementById("open-modal-button");
+const openModalFooterButtonEl = document.getElementById("open-modal-footer-button");
 
 let modalIsOpen = false;
 
@@ -31,6 +32,7 @@ function closeButtonHandler(){
 modalEl.onclick = (event) => {
   if(event.target === event.currentTarget) closeModal();
 }
-closeModalFormButtonEl.onclick = closeModal;
-closeModalButtonEl.onclick = closeModal;
-openModalButtonEl.onclick = openModal;
+if(closeModalFormButtonEl) closeModalFormButtonEl.onclick = closeModal;
+if(closeModalButtonEl) closeModalButtonEl.onclick = closeModal;
+if(openModalButtonEl) openModalButtonEl.onclick = openModal;
+if(openModalFooterButtonEl) openModalFooterButtonEl.onclick = openModal;

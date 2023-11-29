@@ -15,108 +15,6 @@
 </head>
 
 <body>
-  <div class="modal" id="modal">
-    <div class="modal__wrapper">
-      <button class="modal__x-button x-button" id="close-modal-button"></button>
-
-      <div class="modal__container">
-        <h2 class="modal__title">Заполните форму
-          <br />и мы подберем площадку
-        </h2>
-        <form class="modal__form form">
-          <div class="form__section">
-            <h4 class="form__subtitle">Формат мероприятия:</h4>
-            <div class="form__elements form__elements--radios">
-              <div class="radio form__radio">
-                <input type="radio" class="radio__input" name="type" id="1" checked />
-                <label for="1" class="radio__label">Мастер-класс/семинар</label>
-              </div>
-              <div class="radio form__radio">
-                <input type="radio" class="radio__input" name="type" id="2" />
-                <label for="2" class="radio__label">Концерт/выступление</label>
-              </div>
-              <div class="radio form__radio">
-                <input type="radio" class="radio__input" name="type" id="3" />
-                <label for="3" class="radio__label">Выставка/показ</label>
-              </div>
-              <div class="radio form__radio">
-                <input type="radio" class="radio__input" name="type" id="4" />
-                <label for="4" class="radio__label">Другое</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="form__section">
-            <h4 class="form__subtitle">Планируемое количество посетителей:</h4>
-            <div class="form__elements form__elements--peoples">
-              <label class="form__field field">
-                <select class="field__select" name="people">
-                  <option value="0-20" selected>до 20 человек</option>
-                  <option value="20-100">от 20 до 100 человек</option>
-                  <option value="100-500">от 100 до 500 человек</option>
-                  <option value="500">более 500 человек</option>
-                </select>
-              </label>
-            </div>
-
-            <h4 class="form__subtitle">Дата проведения:</h4>
-            <div class="form__elements form__elements--date">
-              <label class="form__field field">
-                <input type="text" class="field__input field__input--day" placeholder="ДД">
-              </label>
-              <label class="form__field field">
-                <input type="text" class="field__input field__input--month" placeholder="ММ">
-              </label>
-              <label class="form__field field">
-                <input type="text" class="field__input field__input--year" placeholder="ГГГГ">
-              </label>
-            </div>
-          </div>
-
-          <div class="form__section form__section--full-width">
-            <h4 class="form__subtitle">Контактные данные:</h4>
-            <div class="form__elements form__elements--data">
-              <label class="form__field form__field--half field">
-                <span class="field__label">Имя*</span>
-                <input type="text" class="field__input" placeholder="Имя">
-              </label>
-              <label class="form__field form__field--half field">
-                <span class="field__label">Фамилия*</span>
-                <input type="text" class="field__input" placeholder="Фамилия">
-              </label>
-              <label class="form__field form__field--half field">
-                <span class="field__label">Телефон*</span>
-                <input type="text" class="field__input" placeholder="+7 (___) ___ __ __">
-              </label>
-              <label class="form__field form__field--half field">
-                <span class="field__label">Email*</span>
-                <input type="text" class="field__input" placeholder="Email">
-              </label>
-            </div>
-          </div>
-
-          <div class="form__section form__section--full-width">
-            <h4 class="form__subtitle">Есть пожелания? Напишите нам:</h4>
-            <label class="form__field field">
-              <input type="textarea" class="field__textarea">
-            </label>
-          </div>
-
-          <div class="form__section form__section--full-width">
-            <div class="checkbox ">
-              <input type="checkbox" name="accept" id="accept" class="checkbox__input" checked />
-              <label class="checkbox__label" for="accept">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</label>
-            </div>
-          </div>
-
-          <div class="form__buttons form__section--full-width">
-            <button class="form__button button" type="submit">Отправить</button>
-            <button class="form__button form__button--inline button" type="button" id="close-modal-form-button">Закрыть</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
   <header class="page-header">
     <div class="page-header__container">
       <a href="./index.html" class="page-header__logo">
@@ -166,9 +64,164 @@
       <div class="doit home__doit"></div>
     </div>
   </main>
-  <footer class="page-footer"></footer>
+  <footer class="page-footer">
+    <div class="modal" id="modal">
+      <div class="modal__wrapper">
+        <button class="modal__x-button x-button" id="close-modal-button"></button>
 
-  <script src="./scripts/modal.js"></script>
+        <div class="modal__container">
+          <h2 class="modal__title">Заполните форму
+            <br />и мы подберем площадку
+          </h2>
+          <form class="modal__form form">
+            <div class="form__section">
+              <h4 class="form__subtitle">Формат мероприятия:</h4>
+              <div class="form__elements form__elements--radios">
+                <div class="radio form__radio">
+                  <input type="radio" class="radio__input" name="type" id="1" checked />
+                  <label for="1" class="radio__label">Мастер-класс/семинар</label>
+                </div>
+                <div class="radio form__radio">
+                  <input type="radio" class="radio__input" name="type" id="2" />
+                  <label for="2" class="radio__label">Концерт/выступление</label>
+                </div>
+                <div class="radio form__radio">
+                  <input type="radio" class="radio__input" name="type" id="3" />
+                  <label for="3" class="radio__label">Выставка/показ</label>
+                </div>
+                <div class="radio form__radio">
+                  <input type="radio" class="radio__input" name="type" id="4" />
+                  <label for="4" class="radio__label">Другое</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__section">
+              <h4 class="form__subtitle">Планируемое количество посетителей:</h4>
+              <div class="form__elements form__elements--peoples">
+                <label class="form__field field">
+                  <select class="field__select" name="people">
+                    <option value="0-20" selected>до 20 человек</option>
+                    <option value="20-100">от 20 до 100 человек</option>
+                    <option value="100-500">от 100 до 500 человек</option>
+                    <option value="500">более 500 человек</option>
+                  </select>
+                </label>
+              </div>
+
+              <h4 class="form__subtitle">Дата проведения:</h4>
+              <div class="form__elements form__elements--date">
+                <label class="form__field field">
+                  <input type="text" class="field__input field__input--day" placeholder="ДД">
+                </label>
+                <label class="form__field field">
+                  <input type="text" class="field__input field__input--month" placeholder="ММ">
+                </label>
+                <label class="form__field field">
+                  <input type="text" class="field__input field__input--year" placeholder="ГГГГ">
+                </label>
+              </div>
+            </div>
+
+            <div class="form__section form__section--full-width">
+              <h4 class="form__subtitle">Контактные данные:</h4>
+              <div class="form__elements form__elements--data">
+                <label class="form__field form__field--half field">
+                  <span class="field__label">Имя*</span>
+                  <input type="text" class="field__input" placeholder="Имя">
+                </label>
+                <label class="form__field form__field--half field">
+                  <span class="field__label">Фамилия*</span>
+                  <input type="text" class="field__input" placeholder="Фамилия">
+                </label>
+                <label class="form__field form__field--half field">
+                  <span class="field__label">Телефон*</span>
+                  <input type="text" class="field__input" placeholder="+7 (___) ___ __ __">
+                </label>
+                <label class="form__field form__field--half field">
+                  <span class="field__label">Email*</span>
+                  <input type="text" class="field__input" placeholder="Email">
+                </label>
+              </div>
+            </div>
+
+            <div class="form__section form__section--full-width">
+              <h4 class="form__subtitle">Есть пожелания? Напишите нам:</h4>
+              <label class="form__field field">
+                <input type="textarea" class="field__textarea">
+              </label>
+            </div>
+
+            <div class="form__section form__section--full-width">
+              <div class="checkbox ">
+                <input type="checkbox" name="accept" id="accept" class="checkbox__input" checked />
+                <label class="checkbox__label" for="accept">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</label>
+              </div>
+            </div>
+
+            <div class="form__buttons form__section--full-width">
+              <button class="form__button button" type="submit">Отправить</button>
+              <button class="form__button form__button--inline button" type="button" id="close-modal-form-button">Закрыть</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer__container">
+      <div class="page-footer__main">
+        <nav class="page-footer__nav">
+          <a href="/events.html" class="page-footer__link">Календарь мероприятий</a>
+          <button class="page-footer__button" id="open-modal-footer-button">Провести мероприятие</button>
+          <a href="#" class="page-footer__link">Стать арендатором</a>
+          <a href="#" class="page-footer__link">Наши проекты</a>
+          <a href="#" class="page-footer__link">Контакты</a>
+        </nav>
+
+        <form class="page-footer__form">
+          <label class="page-footer__form-label">
+            <span class="page-footer__form-span">Подпишись и будь в курсе происходящего</span>
+            <input type="text" class="page-footer__form-input" placeholder="Email" />
+            <button class="page-footer__form-button" type="submit">Подписаться</button>
+          </label>
+          <div class="checkbox page-footer__checkbox">
+            <input type="checkbox" name="subscribe" id="subscribe" class="checkbox__input" checked />
+            <label class="checkbox__label" for="subscribe">Согласен на обработку персональных данных</label>
+          </div>
+        </form>
+      </div>
+
+      <div class="page-footer__other">
+        <div class="page-footer__confirmations">
+          <p class="page-footer__right">© Millennials 2022</p>
+          <a href="#" class="page-footer__confirmation">Политика конфиденциальности</a>
+          <a href="#" class="page-footer__confirmation">Cookies</a>
+        </div>
+
+        <div class="page-footer__socials">
+          <a href="#" class="page-footer__socials-link">
+            <svg class="page-footer__socials-icon">
+              <use xlink:href="./assets/icons/symbols.svg#insta"></use>
+            </svg>
+          </a>
+          <a href="#" class="page-footer__socials-link">
+            <svg class="page-footer__socials-icon">
+              <use xlink:href="./assets/icons/symbols.svg#vk"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="page-footer__creator">
+          <a href="https://tagree.ru/" target="_blank" class="page-footer__creator-link">
+            <span class="page-footer__creator-span">Создание и продвижение</span>
+            <img src="./assets/images/tagree.svg" alt="" class="page-footer__creator-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/modal.js"></script>
+  </footer>
 </body>
 
 </html>
