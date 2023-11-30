@@ -48,25 +48,23 @@
           <div class="article__main-info">
             <div class="article__info article__info--left">
               <time datetime="2022-12-16" class="article__date">16/12/2022</time>
-              <div class="article__text article__text--place">Кафе «Птичка»</div>
+              <div class="article__text article__text">Кафе «Птичка»</div>
             </div>
             <picture class="article__picture">
               <img src="./assets/images/sade.jpg" alt="sade" class="article__image">
             </picture>
             <div class="article__info">
               <div class="article__start">
-                <time datetime="20:00" class="article__date article__date--time">20.00</time>
+                <time datetime="20:00" class="article__date article__date">20.00</time>
                 <span class="article__text article__text--span">начало</span>
               </div>
-              <div class="article__text article__text--address">Ленина 10 | 2 этаж</div>
+              <div class="article__text article__text">Ленина 10 | 2 этаж</div>
             </div>
           </div>
 
           <div class="article__content content">
             <div class="content__programm">
-              <h5>
-                <b>Программа мероприятия:</b>
-              </h5>
+              <h5 class="bold">Программа мероприятия:</h5>
               <ul>
                 <li>20:15 — Приветствие гостей</li>
                 <li>20:30 — Первая подача блюд | Салаты</li>
@@ -80,9 +78,7 @@
             </div>
 
             <div class="content__description">
-              <h5>
-                <b>The Best Of Sade</b>
-              </h5>
+              <h5 class="bold">The Best Of Sade</h5>
               <p>
                 Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые
                 <br />популярные хиты группы, раритеты и их любимые треки.
@@ -111,7 +107,7 @@
       <section class="event__reservation reservation">
         <div class="reservation__container">
           <form class="reservation__form reservation-form">
-            <h4 class="reservation-form__legend reservation-form__legend--checkboxes reservation__legend">Забронировать столик</h4>
+            <h4 class="reservation-form__legend reservation-form__legend--mb30 reservation__legend">Забронировать столик</h4>
             <div class="reservation-form__checkboxes-list">
               <label class="checkbox reservation-form__table checkbox--red">
                 <input type="checkbox" name="tableNum" class="checkbox__input" />
@@ -159,7 +155,7 @@
               </label>
             </div>
             <div class="reservation-form__bilets">
-              <h4 class="reservation-form__legend reservation-form__legend--bilets reservation__legend">Ваши пригласительные билеты</h4>
+              <h4 class="reservation-form__legend reservation-form__legend reservation__legend">Ваши пригласительные билеты</h4>
               <div class="reservation-form__bilets-list">
                 <div class="reservation-form__bilets-item">
                   <div class="reservation-form__count">9 шт. | 1400</div>
@@ -189,10 +185,10 @@
               <div class="reservation__table-info reservation__table-info--black">1400 ₽ | 1 персона</div>
               <div class="reservation__table-info reservation__table-info--red">1250 ₽ | 1 персона</div>
             </div>
-            <h4 class="reservation__legend reservation__legend--margin-top">Примечание</h4>
+            <h4 class="reservation__legend reservation__legend--mt40">Примечание</h4>
             <div class="reservation__notes">
-              <div class="reservation__note reservation__table-info--free">доступные места</div>
-              <div class="reservation__note reservation__table-info--busy">забронировано</div>
+              <div class="reservation__note reservation__table-info--black-red">доступные места</div>
+              <div class="reservation__note reservation__table-info--gray">забронировано</div>
             </div>
           </div>
         </div>
@@ -211,7 +207,7 @@
           <form class="modal__form form">
             <div class="form__section">
               <h4 class="form__subtitle">Формат мероприятия:</h4>
-              <div class="form__elements form__elements--radios">
+              <div class="form__elements form__elements--ff-col">
                 <label class="radio form__radio">
                   <input type="radio" class="radio__input" name="type" checked />
                   <span class="radio__label">Мастер-класс/семинар</span>
@@ -233,7 +229,7 @@
 
             <div class="form__section">
               <h4 class="form__subtitle">Планируемое количество посетителей:</h4>
-              <div class="form__elements form__elements--peoples">
+              <div class="form__elements form__elements--mb30">
                 <label class="form__field field">
                   <select class="field__select" name="people">
                     <option value="0-20" selected>до 20 человек</option>
@@ -245,35 +241,35 @@
               </div>
 
               <h4 class="form__subtitle">Дата проведения:</h4>
-              <div class="form__elements form__elements--date">
+              <div class="form__elements form__elements--min-content">
                 <label class="form__field field">
-                  <input type="text" name="day" class="field__input field__input--day" placeholder="ДД">
+                  <input type="text" name="day" class="field__input field__input--w55" placeholder="ДД">
                 </label>
                 <label class="form__field field">
-                  <input type="text" name="month" class="field__input field__input--month" placeholder="ММ">
+                  <input type="text" name="month" class="field__input field__input--w55" placeholder="ММ">
                 </label>
                 <label class="form__field field">
-                  <input type="text" name="year" class="field__input field__input--year" placeholder="ГГГГ">
+                  <input type="text" name="year" class="field__input field__input--w110" placeholder="ГГГГ">
                 </label>
               </div>
             </div>
 
             <div class="form__section form__section--full-width">
               <h4 class="form__subtitle">Контактные данные:</h4>
-              <div class="form__elements form__elements--data">
-                <label class="form__field form__field--half field">
+              <div class="form__elements form__elements--flex">
+                <label class="form__field form__field--half-width field">
                   <span class="field__label">Имя*</span>
                   <input type="text" name="name" class="field__input" placeholder="Имя">
                 </label>
-                <label class="form__field form__field--half field">
+                <label class="form__field form__field--half-width field">
                   <span class="field__label">Фамилия*</span>
                   <input type="text" name="surname" class="field__input" placeholder="Фамилия">
                 </label>
-                <label class="form__field form__field--half field">
+                <label class="form__field form__field--half-width field">
                   <span class="field__label">Телефон*</span>
                   <input type="text" name="phone" class="field__input" placeholder="+7 (___) ___ __ __">
                 </label>
-                <label class="form__field form__field--half field">
+                <label class="form__field form__field--half-width field">
                   <span class="field__label">Email*</span>
                   <input type="text" name="email" class="field__input" placeholder="Email">
                 </label>

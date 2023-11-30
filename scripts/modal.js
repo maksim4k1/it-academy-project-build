@@ -8,22 +8,22 @@ let modalIsOpen = false;
 
 function closeModal(){
   document.body.style.overflow = "auto";
-  modalEl.classList.remove("modal--opened");
+  modalEl.classList.remove("modal--visible");
   modalIsOpen = false;
 }
 function openModal(){
   document.body.style.overflow = "hidden";
-  modalEl.classList.add("modal--opened");
+  modalEl.classList.add("modal--visible");
   modalIsOpen = true;
 }
 
 function closeButtonHandler(){
   if(modalIsOpen){
     document.body.style.overflow = "auto";
-    modalEl.classList.remove("modal--opened");
+    modalEl.classList.remove("modal--visible");
   } else{
     document.body.style.overflow = "hidden";
-    modalEl.classList.add("modal--opened");
+    modalEl.classList.add("modal--visible");
   }
 
   modalIsOpen = !modalIsOpen;

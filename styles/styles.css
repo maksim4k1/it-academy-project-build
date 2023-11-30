@@ -358,17 +358,15 @@ textarea:focus::placeholder {
   height: 149px;
   padding: 16.5px 20px;
 }
-.field__input--day {
-  width: 55px;
-  padding: 0 16px;
-}
-.field__input--month {
+.field__input--w55 {
   width: 55px;
   padding: 0 13px;
+  text-align: center;
 }
-.field__input--year {
+.field__input--w110 {
   width: 110px;
   padding: 0 38px;
+  text-align: center;
 }
 .action {
   -webkit-box-sizing: border-box;
@@ -482,7 +480,7 @@ textarea:focus::placeholder {
 .modal::-webkit-scrollbar-thumb {
   background-color: rgba(28, 27, 27, 0.4);
 }
-.modal--opened {
+.modal--visible {
   visibility: visible;
   opacity: 1;
 }
@@ -848,6 +846,14 @@ textarea:focus::placeholder {
 .content h5:last-child,
 .content h6:last-child {
   margin-bottom: 0;
+}
+.content h1.bold,
+.content h2.bold,
+.content h3.bold,
+.content h4.bold,
+.content h5.bold,
+.content h6.bold {
+  font-weight: 700;
 }
 .content h1 {
   font-size: 32px;
@@ -1232,21 +1238,21 @@ textarea:focus::placeholder {
   display: flex;
   gap: 15px;
 }
-.form__elements--radios {
+.form__elements--ff-col {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
 }
-.form__elements--peoples {
+.form__elements--mb30 {
   margin-bottom: 30px;
 }
-.form__elements--date > .form__field {
+.form__elements--min-content > .form__field {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
-.form__elements--data {
+.form__elements--flex {
   margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1264,7 +1270,7 @@ textarea:focus::placeholder {
 .form__field {
   width: 100%;
 }
-.form__field--half {
+.form__field--half-width {
   width: calc(50% - 30px);
 }
 .form__buttons {
@@ -1389,8 +1395,8 @@ textarea:focus::placeholder {
   font-size: 18px;
   font-weight: 700;
 }
-.reservation-form__legend--checkboxes {
-  margin: 0 0 30px;
+.reservation-form__legend--mb30 {
+  margin-bottom: 30px;
 }
 .reservation-form__checkboxes-list {
   list-style: none;
@@ -1504,7 +1510,7 @@ textarea:focus::placeholder {
   font-size: 18px;
   font-weight: 700;
 }
-.reservation__legend--margin-top {
+.reservation__legend--mt40 {
   margin-top: 40px;
 }
 .reservation__scene-container {
@@ -1580,7 +1586,7 @@ textarea:focus::placeholder {
   height: 24px;
   background: #1f1e1e;
 }
-.reservation__table-info--free::before {
+.reservation__table-info--black-red::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   content: "";
@@ -1593,7 +1599,7 @@ textarea:focus::placeholder {
   border: 1px solid #1f1e1e;
   border-radius: 50%;
 }
-.reservation__table-info--free::after {
+.reservation__table-info--black-red::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   content: "";
@@ -1606,7 +1612,7 @@ textarea:focus::placeholder {
   border: 1px solid #BC3324;
   border-radius: 50%;
 }
-.reservation__table-info--busy::before {
+.reservation__table-info--gray::before {
   content: "";
   position: absolute;
   left: -33px;
@@ -1652,7 +1658,7 @@ textarea:focus::placeholder {
   width: 100%;
   border-collapse: collapse;
 }
-.table__colgroup--first {
+.table__colgroup--w400 {
   min-width: 400px;
   max-width: 400px;
   width: 400px;
