@@ -114,28 +114,28 @@ textarea:focus::placeholder {
 }
 .x-button {
   position: relative;
+  background-color: transparent;
+}
+.x-button::before {
+  content: "";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 60px;
   height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #1f1e1e;
   border-radius: 50%;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
-.x-button::before,
-.x-button::after {
+.x-button__mark::before,
+.x-button__mark::after {
   content: "";
   position: absolute;
   top: 21px;
-  left: 29px;
+  right: 29px;
   display: block;
   width: 2px;
   height: 18px;
@@ -145,7 +145,7 @@ textarea:focus::placeholder {
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.x-button::before {
+.x-button__mark::before {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -338,6 +338,13 @@ textarea:focus::placeholder {
   font-size: 16px;
   font-weight: 400;
 }
+.field--ff-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  gap: 15px;
+}
 .field__input,
 .field__textarea,
 .field__select {
@@ -493,15 +500,26 @@ textarea:focus::placeholder {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  padding: 110px 170px 40px;
   background-color: #DEDEDE;
   background-image: url("../assets/images/noise.png");
   background-repeat: repeat;
 }
+.modal__container {
+  padding: 110px 170px 40px;
+}
 .modal__x-button {
-  position: absolute;
-  top: -30px;
-  right: -33px;
+  position: sticky;
+  top: 10px;
+  margin-left: 100%;
+}
+.modal__x-button::before {
+  top: -46px;
+  right: -20px;
+}
+.modal__x-button > .x-button__mark::before,
+.modal__x-button > .x-button__mark::after {
+  top: -25px;
+  right: 9px;
 }
 .modal__title {
   position: absolute;
@@ -1813,7 +1831,7 @@ textarea:focus::placeholder {
   pointer-events: none !important;
 }
 @media (hover: hover) {
-  .x-button:hover {
+  .x-button:hover::before {
     background-color: #A51505;
   }
   .button:hover {
