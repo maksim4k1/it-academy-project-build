@@ -38,8 +38,13 @@
   <main class="main">
     <div class="event">
       <div class="event__breads breads">
-        <a href="./" class="event__breads-link breads__link">Главная</a> /
-        <a href="./events.html" class="event__breads-link breads__link">Мероприятия</a> / Вечер | The Best of Sade
+        <div class="breads__bread">
+          <a href="./" class="event__breads-link breads__link">Главная</a>
+        </div>
+        <div class="breads__bread">
+          <a href="./events.html" class="event__breads-link breads__link">Мероприятия</a>
+        </div>
+        <div class="breads__bread">Вечер | The Best of Sade</div>
       </div>
       <section class="event__article article">
         <div class="article__container">
@@ -63,34 +68,34 @@
           </div>
 
           <div class="article__content content">
-            <div class="content__programm">
-              <h5 class="bold">Программа мероприятия:</h5>
-              <ul>
-                <li>20:15 — Приветствие гостей</li>
-                <li>20:30 — Первая подача блюд | Салаты</li>
-                <li>20:40 — Живой вокал | Композиции 1-3</li>
-                <li>21:20 — Подача горячих блюд</li>
-                <li>21:30 — Живой вокал | Композиции 4-7</li>
-                <li>22:15 — Подача десерта</li>
-                <li>22:30 — Живой вокал | Композиции 8-9</li>
-                <li>23:00 — Завершение вечера</li>
-              </ul>
-            </div>
+            <h5>
+              <b>Программа мероприятия:</b>
+            </h5>
+            <ul>
+              <li>20:15 — Приветствие гостей</li>
+              <li>20:30 — Первая подача блюд | Салаты</li>
+              <li>20:40 — Живой вокал | Композиции 1-3</li>
+              <li>21:20 — Подача горячих блюд</li>
+              <li>21:30 — Живой вокал | Композиции 4-7</li>
+              <li>22:15 — Подача десерта</li>
+              <li>22:30 — Живой вокал | Композиции 8-9</li>
+              <li>23:00 — Завершение вечера</li>
+            </ul>
 
-            <div class="content__description">
-              <h5 class="bold">The Best Of Sade</h5>
-              <p>
-                Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые
-                <br />популярные хиты группы, раритеты и их любимые треки.
-                <br />
-                <br />
-                Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.
-                <br />Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав
-                <br />более 2 миллионов копий в Европе.
-              </p>
-            </div>
+            <h5>
+              <b>The Best Of Sade</b>
+            </h5>
+            <p>
+              Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые
+              <br />популярные хиты группы, раритеты и их любимые треки.
+              <br />
+              <br />
+              Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.
+              <br />Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав
+              <br />более 2 миллионов копий в Европе.
+            </p>
 
-            <ol class="simple">
+            <ol>
               <li>Your Love Is King</li>
               <li>Hang On To Your Love</li>
               <li>Smooth Operator</li>
@@ -196,116 +201,11 @@
     </div>
   </main>
   <footer class="page-footer">
-    <div class="modal" id="modal">
-      <div class="modal__wrapper">
-        <button class="modal__x-button x-button" id="close-modal-button">
-          <span class="x-button__mark"></span>
-        </button>
-
-        <div class="modal__container">
-          <h2 class="modal__title">Заполните форму
-            <br />и мы подберем площадку
-          </h2>
-          <form class="modal__form form">
-            <div class="form__section">
-              <h4 class="form__subtitle">Формат мероприятия:</h4>
-              <div class="form__elements form__elements--ff-col">
-                <label class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" checked />
-                  <span class="radio__label">Мастер-класс/семинар</span>
-                </label>
-                <label class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" />
-                  <span class="radio__label">Концерт/выступление</span>
-                </label>
-                <label class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" />
-                  <span class="radio__label">Выставка/показ</span>
-                </label>
-                <label class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" />
-                  <span class="radio__label">Другое</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form__section">
-              <h4 class="form__subtitle">Планируемое количество посетителей:</h4>
-              <div class="form__elements form__elements--mb30">
-                <label class="form__field field">
-                  <select class="field__select" name="people">
-                    <option value="0-20" selected>до 20 человек</option>
-                    <option value="20-100">от 20 до 100 человек</option>
-                    <option value="100-500">от 100 до 500 человек</option>
-                    <option value="500">более 500 человек</option>
-                  </select>
-                </label>
-              </div>
-
-              <h4 class="form__subtitle">Дата проведения:</h4>
-              <div class="form__elements form__elements--min-content">
-                <label class="form__field field">
-                  <input type="text" name="day" class="field__input field__input--w55" placeholder="ДД">
-                </label>
-                <label class="form__field field">
-                  <input type="text" name="month" class="field__input field__input--w55" placeholder="ММ">
-                </label>
-                <label class="form__field field">
-                  <input type="text" name="year" class="field__input field__input--w110" placeholder="ГГГГ">
-                </label>
-              </div>
-            </div>
-
-            <div class="form__section form__section--full-width">
-              <h4 class="form__subtitle">Контактные данные:</h4>
-              <div class="form__elements form__elements--flex">
-                <label class="form__field form__field--half-width field">
-                  <span class="field__label">Имя*</span>
-                  <input type="text" name="name" class="field__input" placeholder="Имя">
-                </label>
-                <label class="form__field form__field--half-width field">
-                  <span class="field__label">Фамилия*</span>
-                  <input type="text" name="surname" class="field__input" placeholder="Фамилия">
-                </label>
-                <label class="form__field form__field--half-width field">
-                  <span class="field__label">Телефон*</span>
-                  <input type="text" name="phone" class="field__input" placeholder="+7 (___) ___ __ __">
-                </label>
-                <label class="form__field form__field--half-width field">
-                  <span class="field__label">Email*</span>
-                  <input type="text" name="email" class="field__input" placeholder="Email">
-                </label>
-              </div>
-            </div>
-
-            <div class="form__section form__section--full-width">
-              <h4 class="form__subtitle">Есть пожелания? Напишите нам:</h4>
-              <label class="form__field field">
-                <textarea name="comments" class="field__textarea"></textarea>
-              </label>
-            </div>
-
-            <div class="form__section form__section--full-width">
-              <label class="checkbox form__checkbox">
-                <input type="checkbox" name="accept" class="checkbox__input" checked />
-                <span class="checkbox__label">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
-              </label>
-            </div>
-
-            <div class="form__buttons form__section--full-width">
-              <button class="form__button button" type="submit">Отправить</button>
-              <button class="form__button form__button--inline button" type="button" id="close-modal-form-button">Закрыть</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
     <div class="page-footer__container">
       <div class="page-footer__main">
         <nav class="page-footer__nav">
           <a href="./events.html" class="page-footer__link">Календарь мероприятий</a>
-          <button class="page-footer__button" id="open-modal-footer-button">Провести мероприятие</button>
+          <a href="#" class="page-footer__link">Провести мероприятие</a>
           <a href="#" class="page-footer__link">Стать арендатором</a>
           <a href="#" class="page-footer__link">Наши проекты</a>
           <a href="#" class="page-footer__link">Контакты</a>
@@ -352,8 +252,6 @@
         </div>
       </div>
     </div>
-
-    <script src="./scripts/modal.js"></script>
   </footer>
 </body>
 

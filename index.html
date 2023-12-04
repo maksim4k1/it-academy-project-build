@@ -45,11 +45,116 @@
     </p>
 
     <div class="main-header__buttons action">
+      <div class="modal" id="modal">
+        <div class="modal__wrapper">
+          <button class="modal__x-button x-button" id="close-modal-button">
+            <span class="x-button__mark"></span>
+          </button>
+
+          <div class="modal__container">
+            <h2 class="modal__title">Заполните форму
+              <br />и мы подберем площадку
+            </h2>
+            <form class="modal__form form">
+              <div class="form__section">
+                <h4 class="form__subtitle">Формат мероприятия:</h4>
+                <div class="form__elements form__elements--ff-col">
+                  <label class="radio form__radio">
+                    <input type="radio" class="radio__input" name="type" checked />
+                    <span class="radio__label">Мастер-класс/семинар</span>
+                  </label>
+                  <label class="radio form__radio">
+                    <input type="radio" class="radio__input" name="type" />
+                    <span class="radio__label">Концерт/выступление</span>
+                  </label>
+                  <label class="radio form__radio">
+                    <input type="radio" class="radio__input" name="type" />
+                    <span class="radio__label">Выставка/показ</span>
+                  </label>
+                  <label class="radio form__radio">
+                    <input type="radio" class="radio__input" name="type" />
+                    <span class="radio__label">Другое</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form__section">
+                <h4 class="form__subtitle">Планируемое количество посетителей:</h4>
+                <div class="form__elements form__elements--mb30">
+                  <label class="form__field field">
+                    <select class="field__select" name="people">
+                      <option value="0-20" selected>до 20 человек</option>
+                      <option value="20-100">от 20 до 100 человек</option>
+                      <option value="100-500">от 100 до 500 человек</option>
+                      <option value="500">более 500 человек</option>
+                    </select>
+                  </label>
+                </div>
+
+                <h4 class="form__subtitle">Дата проведения:</h4>
+                <div class="form__elements form__elements--min-content">
+                  <label class="form__field field">
+                    <input type="text" name="day" class="field__input field__input--w55" placeholder="ДД">
+                  </label>
+                  <label class="form__field field">
+                    <input type="text" name="month" class="field__input field__input--w55" placeholder="ММ">
+                  </label>
+                  <label class="form__field field">
+                    <input type="text" name="year" class="field__input field__input--w110" placeholder="ГГГГ">
+                  </label>
+                </div>
+              </div>
+
+              <div class="form__section form__section--full-width">
+                <h4 class="form__subtitle">Контактные данные:</h4>
+                <div class="form__elements form__elements--flex">
+                  <label class="form__field form__field--half-width field">
+                    <span class="field__label">Имя*</span>
+                    <input type="text" name="name" class="field__input" placeholder="Имя">
+                  </label>
+                  <label class="form__field form__field--half-width field">
+                    <span class="field__label">Фамилия*</span>
+                    <input type="text" name="surname" class="field__input" placeholder="Фамилия">
+                  </label>
+                  <label class="form__field form__field--half-width field">
+                    <span class="field__label">Телефон*</span>
+                    <input type="text" name="phone" class="field__input" placeholder="+7 (___) ___ __ __">
+                  </label>
+                  <label class="form__field form__field--half-width field">
+                    <span class="field__label">Email*</span>
+                    <input type="text" name="email" class="field__input" placeholder="Email">
+                  </label>
+                </div>
+              </div>
+
+              <div class="form__section form__section--full-width">
+                <h4 class="form__subtitle">Есть пожелания? Напишите нам:</h4>
+                <label class="form__field field">
+                  <textarea name="comments" class="field__textarea"></textarea>
+                </label>
+              </div>
+
+              <div class="form__section form__section--full-width">
+                <label class="checkbox form__checkbox">
+                  <input type="checkbox" name="accept" class="checkbox__input" checked />
+                  <span class="checkbox__label">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
+                </label>
+              </div>
+
+              <div class="form__buttons form__section--full-width">
+                <button class="form__button button" type="submit">Отправить</button>
+                <button class="form__button form__button--inline button" type="button" id="close-modal-form-button">Закрыть</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
       <div class="action__title">Я хочу:</div>
       <div class="action__container">
         <button class="action__button action__button--red button" id="open-modal-button">Провести мероприятие</button>
         <button class="action__button action__button--white button">Стать арендатором</button>
       </div>
+      <script src="./scripts/modal.js"></script>
     </div>
   </header>
 
@@ -65,116 +170,11 @@
     </div>
   </main>
   <footer class="page-footer">
-    <div class="modal" id="modal">
-      <div class="modal__wrapper">
-        <button class="modal__x-button x-button" id="close-modal-button">
-          <span class="x-button__mark"></span>
-        </button>
-
-        <div class="modal__container">
-          <h2 class="modal__title">Заполните форму
-            <br />и мы подберем площадку
-          </h2>
-          <form class="modal__form form">
-            <div class="form__section">
-              <h4 class="form__subtitle">Формат мероприятия:</h4>
-              <div class="form__elements form__elements--ff-col">
-                <label class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" checked />
-                  <span class="radio__label">Мастер-класс/семинар</span>
-                </label>
-                <label class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" />
-                  <span class="radio__label">Концерт/выступление</span>
-                </label>
-                <label class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" />
-                  <span class="radio__label">Выставка/показ</span>
-                </label>
-                <label class="radio form__radio">
-                  <input type="radio" class="radio__input" name="type" />
-                  <span class="radio__label">Другое</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form__section">
-              <h4 class="form__subtitle">Планируемое количество посетителей:</h4>
-              <div class="form__elements form__elements--mb30">
-                <label class="form__field field">
-                  <select class="field__select" name="people">
-                    <option value="0-20" selected>до 20 человек</option>
-                    <option value="20-100">от 20 до 100 человек</option>
-                    <option value="100-500">от 100 до 500 человек</option>
-                    <option value="500">более 500 человек</option>
-                  </select>
-                </label>
-              </div>
-
-              <h4 class="form__subtitle">Дата проведения:</h4>
-              <div class="form__elements form__elements--min-content">
-                <label class="form__field field">
-                  <input type="text" name="day" class="field__input field__input--w55" placeholder="ДД">
-                </label>
-                <label class="form__field field">
-                  <input type="text" name="month" class="field__input field__input--w55" placeholder="ММ">
-                </label>
-                <label class="form__field field">
-                  <input type="text" name="year" class="field__input field__input--w110" placeholder="ГГГГ">
-                </label>
-              </div>
-            </div>
-
-            <div class="form__section form__section--full-width">
-              <h4 class="form__subtitle">Контактные данные:</h4>
-              <div class="form__elements form__elements--flex">
-                <label class="form__field form__field--half-width field">
-                  <span class="field__label">Имя*</span>
-                  <input type="text" name="name" class="field__input" placeholder="Имя">
-                </label>
-                <label class="form__field form__field--half-width field">
-                  <span class="field__label">Фамилия*</span>
-                  <input type="text" name="surname" class="field__input" placeholder="Фамилия">
-                </label>
-                <label class="form__field form__field--half-width field">
-                  <span class="field__label">Телефон*</span>
-                  <input type="text" name="phone" class="field__input" placeholder="+7 (___) ___ __ __">
-                </label>
-                <label class="form__field form__field--half-width field">
-                  <span class="field__label">Email*</span>
-                  <input type="text" name="email" class="field__input" placeholder="Email">
-                </label>
-              </div>
-            </div>
-
-            <div class="form__section form__section--full-width">
-              <h4 class="form__subtitle">Есть пожелания? Напишите нам:</h4>
-              <label class="form__field field">
-                <textarea name="comments" class="field__textarea"></textarea>
-              </label>
-            </div>
-
-            <div class="form__section form__section--full-width">
-              <label class="checkbox form__checkbox">
-                <input type="checkbox" name="accept" class="checkbox__input" checked />
-                <span class="checkbox__label">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
-              </label>
-            </div>
-
-            <div class="form__buttons form__section--full-width">
-              <button class="form__button button" type="submit">Отправить</button>
-              <button class="form__button form__button--inline button" type="button" id="close-modal-form-button">Закрыть</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
     <div class="page-footer__container">
       <div class="page-footer__main">
         <nav class="page-footer__nav">
           <a href="./events.html" class="page-footer__link">Календарь мероприятий</a>
-          <button class="page-footer__button" id="open-modal-footer-button">Провести мероприятие</button>
+          <a href="#" class="page-footer__link">Провести мероприятие</a>
           <a href="#" class="page-footer__link">Стать арендатором</a>
           <a href="#" class="page-footer__link">Наши проекты</a>
           <a href="#" class="page-footer__link">Контакты</a>
@@ -221,8 +221,6 @@
         </div>
       </div>
     </div>
-
-    <script src="./scripts/modal.js"></script>
   </footer>
 </body>
 
