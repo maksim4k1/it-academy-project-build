@@ -2195,6 +2195,137 @@ textarea:focus::placeholder {
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
+.contacts {
+  margin-bottom: 150px;
+}
+.contacts__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.contacts__title {
+  margin-top: 78px;
+}
+.contacts__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 180px;
+}
+.contacts__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 67px;
+}
+.contacts__item {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 55px;
+}
+.contacts__item-picture {
+  width: 110px;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1f1e1e;
+}
+.contacts__item-icon {
+  width: 24px;
+  height: 24px;
+}
+.contacts__item-info {
+  padding: 12px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 5px;
+}
+.contacts__item-title {
+  margin: 0 0 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.contacts__item-text {
+  margin: 0;
+}
+.contacts__map {
+  width: 100%;
+  height: 100%;
+}
+.contacts__map-picture {
+  position: relative;
+  width: 100%;
+}
+.contacts__map-picture::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 65.559%;
+}
+.contacts__map-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.doit {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 308px;
+  font-family: "mak", serif;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: right;
+}
+.doit::before {
+  content: "Просто делайте, что нравится,";
+  position: absolute;
+  top: 0;
+  width: 2161px;
+  margin-left: 150px;
+  display: block;
+}
+.doit::after {
+  content: "а мы вам поможем";
+  position: absolute;
+  bottom: 0;
+  width: 2161px;
+  margin-left: 150px;
+  display: block;
+}
 .is-hidden {
   position: absolute !important;
   display: none !important;
