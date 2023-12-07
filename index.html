@@ -27,9 +27,9 @@
 
       <nav class="page-header__nav">
         <a href="./events.html" class="page-header__nav-link">Мероприятия</a>
-        <a href="#" class="page-header__nav-link">Блог</a>
-        <a href="#" class="page-header__nav-link">О нас</a>
-        <a href="#" class="page-header__nav-link">Контакты</a>
+        <a href="./index.html#blog" class="page-header__nav-link">Блог</a>
+        <a href="./index.html#about" class="page-header__nav-link">О нас</a>
+        <a href="./index.html#contacts" class="page-header__nav-link">Контакты</a>
       </nav>
 
       <div class="page-header__user-button-container">
@@ -162,7 +162,7 @@
 
   <main class="main">
     <div class="home">
-      <section class="project home__project">
+      <section class="project home__project" id="about">
         <div class="project__container">
           <h2 class="project__title title">О нас</h2>
           <h3 class="project__subtitle">Проект «Millennials»</h3>
@@ -191,9 +191,11 @@
               <p class="project__description project__description--small">Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.</p>
               <a class="project__link" href="#">
                 <span class="project__link-span">Смотреть</span>
-                <svg class="project__link-icon">
-                  <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                </svg>
+                <span class="project__link-icon-container">
+                  <svg class="project__link-icon">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </span>
               </a>
             </div>
           </div>
@@ -258,7 +260,7 @@
           </div>
         </div>
       </section>
-      <section class="blog home__blog">
+      <section class="blog home__blog" id="blog">
         <div class="blog__container">
           <h2 class="blog__title title">Блог</h2>
 
@@ -330,7 +332,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts home__contacts">
+      <section class="contacts home__contacts" id="contacts">
         <div class="contacts__container">
           <h2 class="contacts__title title">Контакты</h2>
 
@@ -352,9 +354,9 @@
                   <img src="./assets/images/home.svg" alt="home" class="contacts__item-icon">
                 </picture>
                 <div class="contacts__item-info">
-                  <h6 class="contacts__item-title">Отдел аренды </h6>
-                  <p class="contacts__item-text">+7 499 350 0730</p>
-                  <p class="contacts__item-text">hi@tagree.ru</p>
+                  <h6 class="contacts__item-title">Отдел аренды</h6>
+                  <a href="tel:+74993500730" class="contacts__item-text contacts__item-text--link">+7 499 350 0730</a>
+                  <a href="mailto:hi@tagree.ru" class="contacts__item-text contacts__item-text--link">hi@tagree.ru</a>
                 </div>
               </div>
 
@@ -363,9 +365,9 @@
                   <img src="./assets/images/star.svg" alt="star" class="contacts__item-icon">
                 </picture>
                 <div class="contacts__item-info">
-                  <h6 class="contacts__item-title">Отдел мероприятий </h6>
-                  <p class="contacts__item-text">+7 499 350 0730</p>
-                  <p class="contacts__item-text">hi@tagree.ru</p>
+                  <h6 class="contacts__item-title">Отдел мероприятий</h6>
+                  <a href="tel:+74993500730" class="contacts__item-text contacts__item-text--link">+7 499 350 0730</a>
+                  <a href="mailto:hi@tagree.ru" class="contacts__item-text contacts__item-text--link">hi@tagree.ru</a>
                 </div>
               </div>
             </div>
@@ -389,8 +391,8 @@
           <a href="./events.html" class="page-footer__link">Календарь мероприятий</a>
           <a href="#" class="page-footer__link">Провести мероприятие</a>
           <a href="#" class="page-footer__link">Стать арендатором</a>
-          <a href="#" class="page-footer__link">Наши проекты</a>
-          <a href="#" class="page-footer__link">Контакты</a>
+          <a href="./index.html#about" class="page-footer__link">Наши проекты</a>
+          <a href="./index.html#contacts" class="page-footer__link">Контакты</a>
         </nav>
 
         <form class="page-footer__form">
