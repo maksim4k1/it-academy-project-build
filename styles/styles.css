@@ -2284,7 +2284,7 @@ textarea:focus::placeholder {
   gap: 67px;
 }
 .contacts__item {
-  width: 400px;
+  max-width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2327,6 +2327,7 @@ textarea:focus::placeholder {
   margin: 0 0 5px;
   font-size: 20px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .contacts__item-text {
   margin: 0;
@@ -2339,6 +2340,7 @@ textarea:focus::placeholder {
   transition: color 0.2s;
 }
 .contacts__map {
+  max-width: 752px;
   width: 100%;
   height: 100%;
 }
