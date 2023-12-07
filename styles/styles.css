@@ -166,6 +166,7 @@ textarea:focus::placeholder {
   font-size: 16px;
   color: #1f1e1e;
   text-align: center;
+  word-break: break-word;
   background: none;
   -webkit-transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
@@ -287,14 +288,20 @@ textarea:focus::placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: calc(100% - 39px);
   gap: 15px;
+  word-break: break-word;
 }
 .checkbox__label::before {
   content: "";
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
+  max-width: 24px;
+  min-width: 24px;
   width: 24px;
+  max-height: 24px;
+  min-height: 24px;
   height: 24px;
   border: 1px solid #1f1e1e;
   background-position: center;
@@ -308,7 +315,7 @@ textarea:focus::placeholder {
   display: block;
   position: absolute;
   left: 8px;
-  top: 3px;
+  top: calc(50% - 8px);
   width: 6px;
   height: 12px;
   border-right: 2px solid #ffffff;
@@ -337,6 +344,7 @@ textarea:focus::placeholder {
   gap: 5px;
   font-size: 16px;
   font-weight: 400;
+  word-break: break-word;
 }
 .field--ff-row {
   -webkit-box-orient: horizontal;
@@ -396,6 +404,7 @@ textarea:focus::placeholder {
   font-size: 22px;
   text-align: center;
   text-transform: uppercase;
+  word-break: break-word;
 }
 .action__button--red {
   color: #ffffff;
@@ -423,10 +432,12 @@ textarea:focus::placeholder {
 }
 .breads__bread {
   position: relative;
+  word-break: break-word;
 }
 .breads__bread::after {
   content: "/";
   position: absolute;
+  top: 0;
   right: -16px;
 }
 .breads__bread:last-child::after {
@@ -439,12 +450,13 @@ textarea:focus::placeholder {
   transition: color 0.2s;
 }
 .title {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   width: 100%;
   max-width: 624px;
-  height: 62px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 62px;
   margin: 100px auto 150px;
+  padding: 8px 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -458,6 +470,8 @@ textarea:focus::placeholder {
   font-family: "Lora", serif;
   font-size: 36px;
   font-weight: 500;
+  text-align: center;
+  word-break: break-word;
   background: #1f1e1e;
   text-transform: uppercase;
 }
@@ -718,6 +732,7 @@ textarea:focus::placeholder {
   display: inline-block;
   margin-left: 6px;
   margin-bottom: 13.5px;
+  word-break: break-word;
 }
 .page-footer__form-input {
   -webkit-box-sizing: border-box;
@@ -1054,6 +1069,14 @@ textarea:focus::placeholder {
   padding-left: 40px;
   padding-right: 40px;
 }
+.article__title {
+  margin: 0 0 80px;
+  font-family: "Lora", serif;
+  font-size: 70px;
+  font-weight: 500;
+  text-align: center;
+  word-break: break-word;
+}
 .article__main-info {
   margin-bottom: 80px;
   display: -webkit-box;
@@ -1069,6 +1092,7 @@ textarea:focus::placeholder {
   font-family: "mak", serif;
 }
 .article__info {
+  width: 200px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1117,6 +1141,7 @@ textarea:focus::placeholder {
 .article__text {
   font-weight: 700;
   text-transform: uppercase;
+  word-break: break-word;
 }
 .article__text--span {
   display: inline-block;
@@ -1151,13 +1176,6 @@ textarea:focus::placeholder {
           align-items: flex-end;
   gap: 12px;
 }
-.article__title {
-  margin: 0 0 80px;
-  font-family: "Lora", serif;
-  font-size: 70px;
-  font-weight: 500;
-  text-align: center;
-}
 .main-header {
   margin: 100px 0;
 }
@@ -1173,6 +1191,7 @@ textarea:focus::placeholder {
   font-size: 45px;
   text-align: center;
   text-transform: uppercase;
+  word-break: break-word;
 }
 .main-header__picture {
   max-height: 325px;
@@ -1227,6 +1246,7 @@ textarea:focus::placeholder {
   margin: 0 0 10px;
   font-size: 18px;
   font-weight: 700;
+  word-break: break-word;
 }
 .form__elements {
   width: 100%;
@@ -1259,6 +1279,7 @@ textarea:focus::placeholder {
   gap: 30px 60px;
 }
 .form__radio {
+  max-width: 100%;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
@@ -1269,6 +1290,9 @@ textarea:focus::placeholder {
 }
 .form__field--half-width {
   width: calc(50% - 30px);
+}
+.form__checkbox {
+  font-size: 14px;
 }
 .form__buttons {
   margin-top: 10px;
@@ -1295,7 +1319,7 @@ textarea:focus::placeholder {
 }
 .blog-card {
   width: 100%;
-  height: 290px;
+  min-height: 290px;
 }
 .blog-card__link {
   display: -webkit-box;
@@ -1341,11 +1365,13 @@ textarea:focus::placeholder {
 }
 .blog-card__datetime {
   font-weight: 300;
+  word-break: break-word;
 }
 .blog-card__title {
   margin: 70px 0 40px;
   font-size: 24px;
   font-weight: 700;
+  word-break: break-word;
   text-decoration: underline;
   text-decoration-color: transparent;
   -webkit-transition: text-decoration-color 0.2s, color 0.2s;
@@ -1354,6 +1380,7 @@ textarea:focus::placeholder {
 .blog-card__description {
   width: 467px;
   margin: 0;
+  word-break: break-word;
 }
 .blog-card__icon-container {
   min-width: 90px;
@@ -1419,15 +1446,18 @@ textarea:focus::placeholder {
   font-weight: 700;
   text-decoration: underline;
   text-decoration-color: transparent;
+  word-break: break-word;
   -webkit-transition: color 0.2s, text-decoration-color 0.2s;
   transition: color 0.2s, text-decoration-color 0.2s;
 }
 .event-card__description {
   margin: 15px 0;
+  word-break: break-word;
 }
 .event-card__time {
   margin: auto 0 0;
   font-size: 14px;
+  word-break: break-word;
 }
 .events-list__container {
   -webkit-box-sizing: border-box;
@@ -1477,6 +1507,7 @@ textarea:focus::placeholder {
   padding: 0;
   font-size: 18px;
   font-weight: 700;
+  word-break: break-word;
 }
 .reservation-form__legend--mb30 {
   margin-bottom: 30px;
@@ -1592,6 +1623,7 @@ textarea:focus::placeholder {
   padding: 0;
   font-size: 18px;
   font-weight: 700;
+  word-break: break-word;
 }
 .reservation__legend--mt40 {
   margin-top: 40px;
@@ -1600,8 +1632,10 @@ textarea:focus::placeholder {
   width: 100%;
 }
 .reservation__scene-title {
+  padding: 0;
   width: 162px;
-  height: 34px;
+  min-height: 34px;
+  max-height: 34px;
   margin: 0 auto 40px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -1760,6 +1794,7 @@ textarea:focus::placeholder {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
+  word-break: break-word;
 }
 .table__row {
   height: 50px;
@@ -1774,10 +1809,12 @@ textarea:focus::placeholder {
   font-size: 18px;
   font-weight: 400;
   text-align: start;
+  word-break: break-word;
 }
 .table__data {
   font-weight: 600;
   text-align: center;
+  word-break: break-word;
 }
 .table__foot {
   height: 60px;
@@ -1825,10 +1862,11 @@ textarea:focus::placeholder {
   line-height: 30px;
   letter-spacing: 0.44px;
 }
-.services__label {
+.services__description {
   margin-bottom: 60px;
   font-size: 16px;
   font-weight: 400;
+  word-break: break-word;
 }
 .services__table {
   margin-bottom: 50px;
@@ -1855,6 +1893,7 @@ textarea:focus::placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 .services__info-picture {
   width: 110px;
@@ -1878,10 +1917,11 @@ textarea:focus::placeholder {
   margin: 40px 0 10px;
   font-size: 20px;
   font-weight: 600;
+  word-break: break-word;
 }
 .services__info-data {
   width: 401px;
-  text-align: center;
+  word-break: break-word;
 }
 .project__container {
   -webkit-box-sizing: border-box;
@@ -1897,6 +1937,7 @@ textarea:focus::placeholder {
   margin: 0;
   font-size: 44px;
   font-weight: 700;
+  word-break: break-word;
 }
 .project__subtitle--mt50 {
   grid-column-start: 1;
@@ -1909,6 +1950,7 @@ textarea:focus::placeholder {
   width: 867px;
   margin: 50px 0 100px auto;
   font-size: 18px;
+  word-break: break-word;
 }
 .project__description--mb110 {
   grid-column-start: 1;
@@ -1924,7 +1966,7 @@ textarea:focus::placeholder {
 .project__info {
   display: grid;
   grid-template-columns: 65% 1fr;
-  grid-template-rows: auto auto 75px;
+  grid-template-rows: auto auto auto;
   gap: 50px 60px;
   margin-bottom: 110px;
 }
@@ -2235,9 +2277,14 @@ textarea:focus::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 55px;
 }
 .contacts__item-picture {
+  min-width: 110px;
+  max-width: 110px;
   width: 110px;
   height: 110px;
   display: -webkit-box;
@@ -2256,7 +2303,6 @@ textarea:focus::placeholder {
   height: 24px;
 }
 .contacts__item-info {
-  padding: 12px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
