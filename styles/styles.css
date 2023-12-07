@@ -1293,6 +1293,92 @@ textarea:focus::placeholder {
   -webkit-transition: color 0.2s, text-decoration-color 0.2s;
   transition: color 0.2s, text-decoration-color 0.2s;
 }
+.blog-card {
+  width: 100%;
+  height: 290px;
+}
+.blog-card__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+  text-decoration: none;
+}
+.blog-card__picture {
+  display: block;
+  position: relative;
+  width: 467px;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+.blog-card__picture::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  padding-top: 62.313%;
+}
+.blog-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.blog-card__content {
+  width: calc(100% - 527px);
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.blog-card__datetime {
+  font-weight: 300;
+}
+.blog-card__title {
+  margin: 70px 0 40px;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration-color 0.2s, color 0.2s;
+  transition: text-decoration-color 0.2s, color 0.2s;
+}
+.blog-card__description {
+  width: 467px;
+  margin: 0;
+}
+.blog-card__icon-container {
+  min-width: 90px;
+  max-width: 90px;
+  width: 90px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: auto;
+  overflow: hidden;
+}
+.blog-card__icon {
+  width: 90px;
+  height: 90px;
+  stroke: #1f1e1e;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: stroke 0.2s;
+  transition: stroke 0.2s;
+}
 .event-card__link {
   height: 100%;
   display: -webkit-box;
@@ -1939,7 +2025,7 @@ textarea:focus::placeholder {
 }
 .upcoming {
   position: relative;
-  margin: 124px 0 99px;
+  margin: 124px 0 0;
   padding: 86px 0 51px;
   background-color: rgba(255, 255, 255, 0.6);
 }
@@ -2060,6 +2146,55 @@ textarea:focus::placeholder {
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
+.blog__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.blog__list {
+  margin-bottom: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  gap: 120px;
+}
+.blog__blog-card {
+  position: relative;
+}
+.blog__blog-card::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: 40px;
+  display: block;
+  width: calc(100% - 80px);
+  height: 1px;
+  background-color: #1f1e1e;
+}
+.blog__blog-card:last-child::after {
+  display: none;
+}
+.blog__link-container {
+  width: 150px;
+  margin-left: auto;
+}
+.blog__link {
+  display: inline-block;
+  padding: 15px 0 15px 40px;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
 .is-hidden {
   position: absolute !important;
   display: none !important;
@@ -2108,6 +2243,17 @@ textarea:focus::placeholder {
     text-decoration-color: #A51505;
     background-color: transparent;
   }
+  .blog-card__link:hover .blog-card__picture {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(31, 31, 30, 0.55);
+            box-shadow: 0px 0px 30px 0px rgba(31, 31, 30, 0.55);
+  }
+  .blog-card__link:hover .blog-card__title {
+    color: #A51505;
+    text-decoration-color: #A51505;
+  }
+  .blog-card__link:hover .blog-card__icon {
+    stroke: #A51505;
+  }
   .event-card__link:hover > .event-card__title {
     color: #BC3324;
     text-decoration-color: #BC3324;
@@ -2133,6 +2279,9 @@ textarea:focus::placeholder {
     stroke: #A51505;
   }
   .upcoming__link:hover {
+    color: #A51505;
+  }
+  .blog__link:hover {
     color: #A51505;
   }
 }
