@@ -2316,7 +2316,7 @@ textarea:focus::placeholder {
   gap: 60px;
 }
 .contacts__item {
-  padding: 4px;
+  padding: 4px 0;
   max-width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
