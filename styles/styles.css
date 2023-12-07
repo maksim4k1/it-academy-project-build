@@ -1920,12 +1920,6 @@ textarea:focus::placeholder {
   overflow: hidden;
   cursor: pointer;
 }
-.project__link:hover {
-  color: #A51505;
-}
-.project__link:hover > .project__link-icon {
-  stroke: #A51505;
-}
 .project__link-span {
   display: inline-block;
   width: 125px;
@@ -1942,6 +1936,129 @@ textarea:focus::placeholder {
   stroke: #1f1e1e;
   -webkit-transition: stroke 0.2s;
   transition: stroke 0.2s;
+}
+.upcoming {
+  position: relative;
+  margin: 124px 0 99px;
+  padding: 86px 0 51px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.upcoming::before,
+.upcoming::after {
+  content: "";
+  position: absolute;
+  top: -34px;
+  left: 0;
+  display: block;
+  border-bottom: 34px solid rgba(255, 255, 255, 0.6);
+  border-right: 37vw solid transparent;
+}
+.upcoming::after {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-bottom: 34px solid rgba(255, 255, 255, 0.6);
+  border-left: 63vw solid transparent;
+}
+.upcoming__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.upcoming__container::before,
+.upcoming__container::after {
+  content: "";
+  position: absolute;
+  bottom: -34px;
+  left: 0;
+  display: block;
+  border-top: 34px solid rgba(255, 255, 255, 0.6);
+  border-right: 64vw solid transparent;
+}
+.upcoming__container::after {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-top: 34px solid rgba(255, 255, 255, 0.6);
+  border-left: 36vw solid transparent;
+}
+.upcoming__title {
+  margin-top: 0;
+}
+.upcoming__swiper {
+  width: 525px;
+  height: 60px;
+  margin: 70px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.upcoming__button {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  overflow: hidden;
+}
+.upcoming__icon {
+  stroke: #1f1e1e;
+  width: 90px;
+  height: 90px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: stroke 0.2s;
+  transition: stroke 0.2s;
+}
+.upcoming__icon--rotate-right {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.upcoming__swipe-sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 6px;
+}
+.upcoming__swipe-section {
+  width: 15px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #BFBFBF;
+}
+.upcoming__swipe-section--active {
+  background-color: #1f1e1e;
+}
+.upcoming__link-container {
+  width: 150px;
+  margin-left: auto;
+}
+.upcoming__link {
+  display: inline-block;
+  padding: 15px 0 15px 40px;
+  text-decoration: none;
+  font-weight: 600;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 .is-hidden {
   position: absolute !important;
@@ -2005,5 +2122,17 @@ textarea:focus::placeholder {
   .reservation-form__button:hover {
     background-color: #A51505;
     border-color: #A51505;
+  }
+  .project__link:hover {
+    color: #A51505;
+  }
+  .project__link:hover > .project__link-icon {
+    stroke: #A51505;
+  }
+  .upcoming__button:hover > .upcoming__icon {
+    stroke: #A51505;
+  }
+  .upcoming__link:hover {
+    color: #A51505;
   }
 }
