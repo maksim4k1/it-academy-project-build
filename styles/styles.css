@@ -674,8 +674,8 @@ textarea:focus::placeholder {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: calc(50% - 49px);
+  left: 10%;
+  width: calc(40% - 49px);
   height: 2px;
   background: -webkit-gradient(linear, right top, left top, from(#1C1B1B), color-stop(82.86%, rgba(255, 255, 255, 0)));
   background: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%);
@@ -683,7 +683,7 @@ textarea:focus::placeholder {
 }
 .page-footer__container::after {
   left: auto;
-  right: 0;
+  right: 10%;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -2303,7 +2303,7 @@ textarea:focus::placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 180px;
+  gap: 100px;
 }
 .contacts__info {
   display: -webkit-box;
@@ -2317,7 +2317,6 @@ textarea:focus::placeholder {
 }
 .contacts__item {
   padding: 4px 0;
-  max-width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2357,10 +2356,10 @@ textarea:focus::placeholder {
   gap: 5px;
 }
 .contacts__item-title {
+  min-width: 150px;
   margin: 0 0 5px;
   font-size: 20px;
   font-weight: 600;
-  white-space: nowrap;
 }
 .contacts__item-text {
   margin: 0;
