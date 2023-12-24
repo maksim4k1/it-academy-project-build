@@ -1312,6 +1312,12 @@ textarea:focus::placeholder {
 .form__button {
   height: 48px;
   width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .form__button--inline {
   width: 70px;
