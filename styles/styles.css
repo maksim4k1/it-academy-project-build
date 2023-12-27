@@ -340,7 +340,7 @@ textarea:focus::placeholder {
           flex-flow: column;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: start;
+          align-items: flex-start;
   gap: 5px;
   font-size: 16px;
   font-weight: 400;
@@ -733,7 +733,7 @@ textarea:focus::placeholder {
 .page-footer__form-span {
   display: inline-block;
   margin-left: 6px;
-  margin-bottom: 25px;
+  margin-bottom: 14px;
   font-weight: 600;
   word-break: break-word;
 }
@@ -819,7 +819,7 @@ textarea:focus::placeholder {
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
 }
 .page-footer__creator-link {
   display: -webkit-box;
@@ -1697,7 +1697,7 @@ textarea:focus::placeholder {
           align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
   margin: 0 0 0 auto;
   font-size: 14px;
 }
@@ -1782,7 +1782,7 @@ textarea:focus::placeholder {
           align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
   margin: 0 0 0 auto;
   font-size: 14px;
 }
@@ -2401,35 +2401,23 @@ textarea:focus::placeholder {
 }
 .doit {
   position: relative;
-  margin-bottom: -50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 308px;
+  left: -2.7vw;
+  width: 112.55vw;
+}
+.doit__text {
   font-family: "mak", serif;
-  font-size: 128px;
+  font-size: 6.666vw;
   font-weight: 700;
   line-height: 120%;
-  text-align: right;
 }
-.doit::before {
-  content: "Просто делайте, что нравится,";
-  position: absolute;
-  top: 0;
-  width: 2161px;
-  margin-left: 135px;
-  display: block;
+.doit__text--first {
+  display: inline;
 }
-.doit::after {
-  content: "а мы вам поможем";
-  position: absolute;
-  bottom: 0;
-  width: 2161px;
-  margin-left: 135px;
-  display: block;
+.doit__text--second {
+  display: inline;
+}
+.doit__text--third {
+  text-align: end;
 }
 .is-hidden {
   position: absolute !important;
