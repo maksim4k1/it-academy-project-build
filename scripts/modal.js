@@ -2,17 +2,16 @@ const modalEl = document.getElementById("modal");
 const closeModalFormButtonEl = document.getElementById("close-modal-form-button");
 const closeModalButtonEl = document.getElementById("close-modal-button");
 const openModalButtonEl = document.getElementById("open-modal-button");
-const htmlEl = document.getElementById("html");
 
 let modalIsOpen = false;
 
 function closeModal(){
-  htmlEl.style.overflow = "auto";
+  document.documentElement.style.overflow = "auto";
   modalEl.classList.remove("modal--visible");
   modalIsOpen = false;
 }
 function openModal(){
-  htmlEl.style.overflow = "hidden";
+  document.documentElement.style.overflow = "hidden";
   modalEl.classList.add("modal--visible");
   modalIsOpen = true;
 }
