@@ -69,6 +69,7 @@
 
   // swiper
   const swipers = document.querySelectorAll(".js-swiper");
+
   swipers.forEach(function (swpr) {
     new Swiper(swpr, {
       updateOnWindowResize: true,

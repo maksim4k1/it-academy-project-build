@@ -2167,6 +2167,9 @@ textarea:focus::placeholder {
   word-break: break-word;
   line-height: 58px;
 }
+.main-header__picture-container {
+  position: relative;
+}
 .main-header__picture {
   position: relative;
   display: -webkit-box;
