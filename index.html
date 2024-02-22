@@ -25,21 +25,36 @@
         </svg>
       </a>
 
-      <nav class="page-header__nav">
+      <nav class="page-header__nav" id="js-header-nav">
         <a href="./events.html" class="page-header__nav-link">Мероприятия</a>
         <a href="./index.html#blog" class="page-header__nav-link">Блог</a>
         <a href="./index.html#about" class="page-header__nav-link">О нас</a>
         <a href="./index.html#contacts" class="page-header__nav-link">Контакты</a>
+        <a href="./index.html#" class="page-header__nav-link page-header__nav-link--login">
+          Александр С.
+          <svg class="page-header__nav-link-icon">
+            <use xlink:href="assets/icons/symbols.svg#login"></use>
+          </svg>
+        </a>
       </nav>
 
-      <div class="page-header__user-button-container">
-        <a href="#" class="button page-header__user-button">Войти</a>
+      <div class="page-header__buttons-container">
+        <a href="#" class="button page-header__user-button">
+          <span class="page-header__user-button--bw">Войти</span>
+          <svg class="page-header__user-button--sw">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
+        <button type="button" class="page-header__burger-button" id="js-burger-button">
+          <span class="page-header__burger-span"></span>
+        </button>
       </div>
     </div>
   </header>
   <header class="main-header home__main-header">
     <h1 class="main-header__title">арт — пространство</h1>
     <picture class="main-header__picture">
+      <div class="main-header__picture-lines"></div>
       <img src="./assets/images/lenni.svg" alt="LENNI" class="main-header__image">
     </picture>
     <p class="main-header__text">для людей, горящих сердцем и делом
@@ -49,7 +64,7 @@
     <div class="main-header__buttons action">
       <div class="action__title">Я хочу:</div>
       <div class="action__container">
-        <button type="button" class="action__button action__button--red button" id="open-modal-button">Провести мероприятие</button>
+        <button type="button" class="action__button action__button--red button" id="js-open-modal-button">Провести мероприятие</button>
         <button type="button" class="action__button action__button--white button">Стать арендатором</button>
       </div>
     </div>
@@ -99,57 +114,86 @@
       <section class="upcoming home__upcoming">
         <div class="upcoming__container">
           <h2 class="upcoming__title title">Мероприятия</h2>
-          <div class="upcoming__list listing">
-            <article class="events-list__event-card event-card">
-              <a href="./event.html" class="event-card__link">
-                <picture class="event-card__picture">
-                  <img src="./assets/images/nirvana.jpg" alt="nirvana" class="event-card__picture-img" />
-                </picture>
-                <h3 class="event-card__title">Собираемся и слушаем альбом Nirvana. Nirvana</h3>
-                <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
-                <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
-              </a>
-            </article>
-            <article class="events-list__event-card event-card">
-              <a href="./event.html" class="event-card__link">
-                <picture class="event-card__picture">
-                  <img src="./assets/images/stuff.jpg" alt="HowStuffWorks" class="event-card__picture-img" />
-                </picture>
-                <h3 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h3>
-                <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
-                <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
-              </a>
-            </article>
-            <article class="events-list__event-card event-card">
-              <a href="./event.html" class="event-card__link">
-                <picture class="event-card__picture">
-                  <img src="./assets/images/sade.jpg" alt="sade" class="event-card__picture-img" />
-                </picture>
-                <h3 class="event-card__title">Вечер | The Best of Sade</h3>
-                <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
-                <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
-              </a>
-            </article>
-          </div>
-          <div class="upcoming__swiper">
-            <button type="button" class="upcoming__button">
-              <svg class="upcoming__icon">
-                <use xlink:href="./assets/icons/symbols.svg#arrow"></use>
-              </svg>
-            </button>
-            <div class="upcoming__swipe-sections">
-              <span class="upcoming__swipe-section"></span>
-              <span class="upcoming__swipe-section"></span>
-              <span class="upcoming__swipe-section upcoming__swipe-section--active"></span>
-              <span class="upcoming__swipe-section"></span>
-              <span class="upcoming__swipe-section"></span>
+          <div class="upcoming__list swiper swiper--3s js-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="swiper__event-card event-card">
+                  <a href="./event.html" class="event-card__link">
+                    <picture class="event-card__picture">
+                      <img src="./assets/images/nirvana.jpg" alt="nirvana" class="event-card__picture-img" />
+                    </picture>
+                    <h3 class="event-card__title">Собираемся и слушаем альбом Nirvana. Nirvana</h3>
+                    <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                    <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
+                  </a>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="swiper__event-card event-card">
+                  <a href="./event.html" class="event-card__link">
+                    <picture class="event-card__picture">
+                      <img src="./assets/images/stuff.jpg" alt="HowStuffWorks" class="event-card__picture-img" />
+                    </picture>
+                    <h3 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h3>
+                    <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                    <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+                  </a>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="swiper__event-card event-card">
+                  <a href="./event.html" class="event-card__link">
+                    <picture class="event-card__picture">
+                      <img src="./assets/images/sade.jpg" alt="sade" class="event-card__picture-img" />
+                    </picture>
+                    <h3 class="event-card__title">Вечер | The Best of Sade</h3>
+                    <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                    <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
+                  </a>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="swiper__event-card event-card">
+                  <a href="./event.html" class="event-card__link">
+                    <picture class="event-card__picture">
+                      <img src="./assets/images/sade.jpg" alt="sade" class="event-card__picture-img" />
+                    </picture>
+                    <h3 class="event-card__title">Вечер | The Best of Sade</h3>
+                    <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                    <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
+                  </a>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="swiper__event-card event-card">
+                  <a href="./event.html" class="event-card__link">
+                    <picture class="event-card__picture">
+                      <img src="./assets/images/sade.jpg" alt="sade" class="event-card__picture-img" />
+                    </picture>
+                    <h3 class="event-card__title">Вечер | The Best of Sade</h3>
+                    <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                    <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
+                  </a>
+                </article>
+              </div>
             </div>
-            <button type="button" class="upcoming__button">
-              <svg class="upcoming__icon upcoming__icon--rotate-right">
-                <use xlink:href="./assets/icons/symbols.svg#arrow"></use>
-              </svg>
-            </button>
+            <div class="upcoming__swiper">
+              <button type="button" class="swiper-arrow-prev upcoming__button">
+                <svg class="upcoming__icon">
+                  <use xlink:href="./assets/icons/symbols.svg#arrow"></use>
+                </svg>
+              </button>
+
+              <div class="swiper-pagination"></div>
+
+              <button type="button" class="swiper-arrow-next upcoming__button">
+                <svg class="upcoming__icon upcoming__icon--rotate-right">
+                  <use xlink:href="./assets/icons/symbols.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
           </div>
+
           <div class="upcoming__link-container">
             <a href="./events.html" class="upcoming__link">Смотреть все</a>
           </div>
@@ -251,7 +295,7 @@
                 <div class="contacts__item-info">
                   <h6 class="contacts__item-title">Отдел аренды</h6>
                   <a href="tel:+74993500730" class="contacts__item-text contacts__item-text--link">+7 499 350 0730</a>
-                  <a href="mailto:hi@tagree.ru" class="contacts__item-text contacts__item-text--link">hi@tagree.ru</a>
+                  <a href="mailto:hi@tagree.ru" class="contacts__item-text contacts__item-text--link contacts__item-text--email">hi@tagree.ru</a>
                 </div>
               </div>
 
@@ -262,15 +306,13 @@
                 <div class="contacts__item-info">
                   <h6 class="contacts__item-title">Отдел мероприятий</h6>
                   <a href="tel:+74993500730" class="contacts__item-text contacts__item-text--link">+7 499 350 0730</a>
-                  <a href="mailto:hi@tagree.ru" class="contacts__item-text contacts__item-text--link">hi@tagree.ru</a>
+                  <a href="mailto:hi@tagree.ru" class="contacts__item-text contacts__item-text--link contacts__item-text--email">hi@tagree.ru</a>
                 </div>
               </div>
             </div>
 
             <div class="contacts__map">
-              <picture class="contacts__map-picture">
-                <img src="./assets/images/map.jpg" alt="map" class="contacts__map-image">
-              </picture>
+              <div class="contacts__map-frame" id="js-map"></div>
             </div>
           </div>
         </div>
@@ -336,9 +378,9 @@
       </div>
     </div>
   </footer>
-  <div class="modal" id="modal">
+  <div class="modal" id="js-modal">
     <div class="modal__wrapper">
-      <button type="button" class="modal__x-button x-button" id="close-modal-button">
+      <button type="button" class="modal__x-button x-button" id="js-close-modal-button">
         <span class="x-button__mark"></span>
       </button>
 
@@ -347,8 +389,8 @@
           <br />и мы подберем площадку
         </h2>
         <form class="modal__form form">
-          <div class="form__section">
-            <h4 class="form__subtitle">Формат мероприятия:</h4>
+          <div class="form__section form__section--first">
+            <h4 class="form__subtitle form__subtitle--first">Формат мероприятия:</h4>
             <div class="form__elements form__elements--ff-col">
               <label class="radio form__radio">
                 <input type="radio" class="radio__input" name="type" checked />
@@ -419,13 +461,13 @@
           </div>
 
           <div class="form__section form__section--full-width">
-            <h4 class="form__subtitle">Есть пожелания? Напишите нам:</h4>
+            <h4 class="form__subtitle form__subtitle--last">Есть пожелания? Напишите нам:</h4>
             <label class="form__field field">
               <textarea name="comments" class="field__textarea"></textarea>
             </label>
           </div>
 
-          <div class="form__section form__section--full-width">
+          <div class="form__section form__section--full-width form__section--checkbox">
             <label class="checkbox form__checkbox">
               <input type="checkbox" name="accept" class="checkbox__input" checked />
               <span class="checkbox__label">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
@@ -434,13 +476,16 @@
 
           <div class="form__buttons form__section--full-width">
             <button class="form__button button" type="submit">Отправить</button>
-            <button class="form__button form__button--inline button" type="button" id="close-modal-form-button">Закрыть</button>
+            <button class="form__button form__button--inline button" type="button" id="js-close-modal-form-button">Закрыть</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-  <script src="./scripts/modal.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcLrkZGDwvV0VPtDxpHiCSB2TyE26f5jI"></script>
+  <script src="./scripts/swiper.min.js"></script>
+  <script src="./scripts/main.js"></script>
 </body>
 
 </html>

@@ -25,15 +25,29 @@
         </svg>
       </a>
 
-      <nav class="page-header__nav">
+      <nav class="page-header__nav" id="js-header-nav">
         <a href="./events.html" class="page-header__nav-link">Мероприятия</a>
         <a href="./index.html#blog" class="page-header__nav-link">Блог</a>
         <a href="./index.html#about" class="page-header__nav-link">О нас</a>
         <a href="./index.html#contacts" class="page-header__nav-link">Контакты</a>
+        <a href="./index.html#" class="page-header__nav-link page-header__nav-link--login">
+          Александр С.
+          <svg class="page-header__nav-link-icon">
+            <use xlink:href="assets/icons/symbols.svg#login"></use>
+          </svg>
+        </a>
       </nav>
 
-      <div class="page-header__user-button-container">
-        <a href="#" class="button page-header__user-button">Войти</a>
+      <div class="page-header__buttons-container">
+        <a href="#" class="button page-header__user-button">
+          <span class="page-header__user-button--bw">Войти</span>
+          <svg class="page-header__user-button--sw">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
+        <button type="button" class="page-header__burger-button" id="js-burger-button">
+          <span class="page-header__burger-span"></span>
+        </button>
       </div>
     </div>
   </header>
@@ -50,7 +64,7 @@
       </div>
       <section class="event__article article">
         <div class="article__container">
-          <h1 class="article__title"> Вечер | The Best of Sade</h1>
+          <h1 class="article__title">Вечер | The Best of Sade</h1>
 
           <div class="article__main-info">
             <div class="article__info article__info--left">
@@ -58,7 +72,7 @@
               <div class="article__text">Кафе «Птичка»</div>
             </div>
             <picture class="article__picture">
-              <img src="./assets/images/sade.jpg" alt="sade" class="article__image">
+              <img src="./assets/images/sade.jpg" alt="sade" class="article__image" />
             </picture>
             <div class="article__info">
               <div class="article__start">
@@ -88,12 +102,17 @@
               <b>The Best Of Sade</b>
             </h5>
             <p>
-              Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые
-              <br />популярные хиты группы, раритеты и их любимые треки.
+              Первый альбом-компиляция Sade, выпущенный в 1994 году. Он
+              содержит 9 треков, включая самые
+              <br />популярные хиты группы,
+              раритеты и их любимые треки.
               <br />
               <br />
-              Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.
-              <br />Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав
+              Группа продемонстрировала необычайное долголетие и креативность
+              своей творческой карьеры.
+              <br />Она лидировала музыкальных чартах
+              с 1994 по 1995 год, став четырехкратно платиновой в США и
+              продав
               <br />более 2 миллионов копий в Европе.
             </p>
 
@@ -114,8 +133,11 @@
       <section class="event__reservation reservation">
         <div class="reservation__container">
           <form class="reservation__form reservation-form">
-            <h4 class="reservation-form__legend reservation-form__legend--mb30">Забронировать столик</h4>
+            <h4 class="reservation-form__legend reservation-form__legend--mb30">
+              Забронировать столик
+            </h4>
             <div class="reservation-form__checkboxes-list">
+              <!-- prettier-ignore -->
               <label class="checkbox reservation-form__table checkbox--red">
                 <input type="checkbox" name="tableNum" class="checkbox__input" />
                 <span class="checkbox__label">1 стол</span>
@@ -161,24 +183,30 @@
                 <span class="checkbox__label">11 стол</span>
               </label>
             </div>
-            <div class="reservation-form__bilets">
-              <h4 class="reservation-form__legend reservation-form__legend reservation__legend">Ваши пригласительные билеты</h4>
-              <div class="reservation-form__bilets-list">
-                <div class="reservation-form__bilets-item">
-                  <div class="reservation-form__count">9 шт. | 1400</div>
-                  <div class="reservation-form__price">12 600</div>
-                </div>
-                <div class="reservation-form__bilets-item">
-                  <div class="reservation-form__count">4 шт. | 1250</div>
-                  <div class="reservation-form__price">5000</div>
-                </div>
+          </form>
+          <form class="reservation__bilets bilets">
+            <h4 class="bilets__legend reservation__legend">
+              Ваши пригласительные билеты
+            </h4>
+            <div class="bilets__bilets-list">
+              <div class="bilets__bilets-item">
+                <div class="bilets__count">9 шт. | 1400</div>
+                <div class="bilets__price">12 600</div>
               </div>
-              <div class="reservation-form__summ">
-                <div class="reservation-form__summ-item">Сумма</div>
-                <div class="reservation-form__summ-item reservation-form__summ-item--right">17 600</div>
+              <div class="bilets__bilets-item">
+                <div class="bilets__count">4 шт. | 1250</div>
+                <div class="bilets__price">5000</div>
               </div>
-              <button class="reservation-form__button button" type="submit">Купить билеты</button>
             </div>
+            <div class="bilets__summ">
+              <div class="bilets__summ-item">Сумма</div>
+              <div class="bilets__summ-item bilets__summ-item--right">
+                17 600
+              </div>
+            </div>
+            <button class="bilets__button button" type="submit">
+              Купить билеты
+            </button>
           </form>
           <div class="reservation__scene-container">
             <h4 class="reservation__scene-title title">Сцена</h4>
@@ -187,15 +215,27 @@
             </svg>
           </div>
           <div class="reservation__info">
-            <h4 class="reservation__legend">Стоимость пригласительного билета</h4>
+            <h4 class="reservation__legend">
+              Стоимость пригласительного билета
+            </h4>
             <div class="reservation__tables-info">
-              <div class="reservation__table-info reservation__table-info--black">1400 ₽ | 1 персона</div>
-              <div class="reservation__table-info reservation__table-info--red">1250 ₽ | 1 персона</div>
+              <div class="reservation__table-info reservation__table-info--black">
+                1400 ₽ | 1 персона
+              </div>
+              <div class="reservation__table-info reservation__table-info--red">
+                1250 ₽ | 1 персона
+              </div>
             </div>
-            <h4 class="reservation__legend reservation__legend--mt40">Примечание</h4>
+            <h4 class="reservation__legend reservation__legend--mt40">
+              Примечание
+            </h4>
             <div class="reservation__notes">
-              <div class="reservation__note reservation__table-info--black-red">доступные места</div>
-              <div class="reservation__note reservation__table-info--gray">забронировано</div>
+              <div class="reservation__note reservation__note--black-red">
+                доступные места
+              </div>
+              <div class="reservation__note reservation__note--gray">
+                забронировано
+              </div>
             </div>
           </div>
         </div>
@@ -255,6 +295,7 @@
       </div>
     </div>
   </footer>
+  <script src="./scripts/main.js"></script>
 </body>
 
 </html>

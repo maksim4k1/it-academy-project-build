@@ -25,15 +25,29 @@
         </svg>
       </a>
 
-      <nav class="page-header__nav">
+      <nav class="page-header__nav" id="js-header-nav">
         <a href="./events.html" class="page-header__nav-link">Мероприятия</a>
         <a href="./index.html#blog" class="page-header__nav-link">Блог</a>
         <a href="./index.html#about" class="page-header__nav-link">О нас</a>
         <a href="./index.html#contacts" class="page-header__nav-link">Контакты</a>
+        <a href="./index.html#" class="page-header__nav-link page-header__nav-link--login">
+          Александр С.
+          <svg class="page-header__nav-link-icon">
+            <use xlink:href="assets/icons/symbols.svg#login"></use>
+          </svg>
+        </a>
       </nav>
 
-      <div class="page-header__user-button-container">
-        <a href="#" class="button page-header__user-button">Войти</a>
+      <div class="page-header__buttons-container">
+        <a href="#" class="button page-header__user-button">
+          <span class="page-header__user-button--bw">Войти</span>
+          <svg class="page-header__user-button--sw">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
+        <button type="button" class="page-header__burger-button" id="js-burger-button">
+          <span class="page-header__burger-span"></span>
+        </button>
       </div>
     </div>
   </header>
@@ -139,6 +153,7 @@
       </div>
     </div>
   </footer>
+  <script src="./scripts/main.js"></script>
 </body>
 
 </html>

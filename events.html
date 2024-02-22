@@ -25,15 +25,29 @@
         </svg>
       </a>
 
-      <nav class="page-header__nav">
+      <nav class="page-header__nav" id="js-header-nav">
         <a href="./events.html" class="page-header__nav-link">Мероприятия</a>
         <a href="./index.html#blog" class="page-header__nav-link">Блог</a>
         <a href="./index.html#about" class="page-header__nav-link">О нас</a>
         <a href="./index.html#contacts" class="page-header__nav-link">Контакты</a>
+        <a href="./index.html#" class="page-header__nav-link page-header__nav-link--login">
+          Александр С.
+          <svg class="page-header__nav-link-icon">
+            <use xlink:href="assets/icons/symbols.svg#login"></use>
+          </svg>
+        </a>
       </nav>
 
-      <div class="page-header__user-button-container">
-        <a href="#" class="button page-header__user-button">Войти</a>
+      <div class="page-header__buttons-container">
+        <a href="#" class="button page-header__user-button">
+          <span class="page-header__user-button--bw">Войти</span>
+          <svg class="page-header__user-button--sw">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
+        <button type="button" class="page-header__burger-button" id="js-burger-button">
+          <span class="page-header__burger-span"></span>
+        </button>
       </div>
     </div>
   </header>
@@ -85,7 +99,7 @@
                   <img src="./assets/images/malevich.jpg" alt="Выставка картин малевича" class="event-card__picture-img" />
                 </picture>
                 <h3 class="event-card__title">Выставка Малевича в Томске</h3>
-                <p class="event-card__description">Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.</p>
+                <p class="event-card__description">Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа.</p>
                 <time datetime="2022-12-23T20:00" class="event-card__time">23.12.2022 | начало 20.00</time>
               </a>
             </article>
@@ -113,7 +127,7 @@
           <button type="button" class="events-list__button">
             <span class="events-list__button-title">Показать еще</span>
             <svg class="events-list__button-icon">
-              <use id="s" xlink:href="./assets/icons/symbols.svg#arrow"></use>
+              <use xlink:href="./assets/icons/symbols.svg#arrow"></use>
             </svg>
           </button>
         </div>
@@ -121,10 +135,7 @@
       <section class="services">
         <div class="services__container">
           <h2 class="services__title title">дополнительные услуги</h2>
-          <p class="services__description">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что
-            <br />все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная
-            <br />работа, результатом которой будет проведение вашего мероприятия на высшем уровне.
-          </p>
+          <p class="services__description">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>
 
           <table class="services__table table">
             <colgroup class="table__colgroup table__colgroup--w400" span="1"></colgroup>
@@ -235,9 +246,9 @@
             <tfoot class="table__foot">
               <tr class="table__row">
                 <td class="table__data"></td>
-                <td class="table__data"></td>
-                <td class="table__data"></td>
-                <td class="table__data"></td>
+                <td class="table__data">Тариф «Light»</td>
+                <td class="table__data">Тариф «Promo»</td>
+                <td class="table__data">Тариф «All stars»</td>
               </tr>
             </tfoot>
           </table>
@@ -245,7 +256,7 @@
           <div class="services__buttons action">
             <div class="action__title">Я хочу:</div>
             <div class="action__container">
-              <button type="button" class="action__button action__button--red button" id="open-modal-button">Провести мероприятие</button>
+              <button type="button" class="action__button action__button--red button" id="js-open-modal-button">Провести мероприятие</button>
               <button type="button" class="action__button action__button--white button">Стать арендатором</button>
             </div>
           </div>
@@ -333,9 +344,9 @@
       </div>
     </div>
   </footer>
-  <div class="modal" id="modal">
+  <div class="modal" id="js-modal">
     <div class="modal__wrapper">
-      <button type="button" class="modal__x-button x-button" id="close-modal-button">
+      <button type="button" class="modal__x-button x-button" id="js-close-modal-button">
         <span class="x-button__mark"></span>
       </button>
 
@@ -344,8 +355,8 @@
           <br />и мы подберем площадку
         </h2>
         <form class="modal__form form">
-          <div class="form__section">
-            <h4 class="form__subtitle">Формат мероприятия:</h4>
+          <div class="form__section form__section--first">
+            <h4 class="form__subtitle form__subtitle--first">Формат мероприятия:</h4>
             <div class="form__elements form__elements--ff-col">
               <label class="radio form__radio">
                 <input type="radio" class="radio__input" name="type" checked />
@@ -416,13 +427,13 @@
           </div>
 
           <div class="form__section form__section--full-width">
-            <h4 class="form__subtitle">Есть пожелания? Напишите нам:</h4>
+            <h4 class="form__subtitle form__subtitle--last">Есть пожелания? Напишите нам:</h4>
             <label class="form__field field">
               <textarea name="comments" class="field__textarea"></textarea>
             </label>
           </div>
 
-          <div class="form__section form__section--full-width">
+          <div class="form__section form__section--full-width form__section--checkbox">
             <label class="checkbox form__checkbox">
               <input type="checkbox" name="accept" class="checkbox__input" checked />
               <span class="checkbox__label">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
@@ -431,13 +442,13 @@
 
           <div class="form__buttons form__section--full-width">
             <button class="form__button button" type="submit">Отправить</button>
-            <button class="form__button form__button--inline button" type="button" id="close-modal-form-button">Закрыть</button>
+            <button class="form__button form__button--inline button" type="button" id="js-close-modal-form-button">Закрыть</button>
           </div>
         </form>
       </div>
     </div>
   </div>
-  <script src="./scripts/modal.js"></script>
+  <script src="./scripts/main.js"></script>
 </body>
 
 </html>
