@@ -63,6 +63,7 @@
         <div class="events-list__container">
           <h2 class="events-list__title title">Мероприятия</h2>
           <div class="events-list__list listing">
+            <!-- prettier-ignore -->
             <article class="events-list__event-card event-card">
               <a href="./event.html" class="event-card__link">
                 <picture class="event-card__picture">
@@ -135,8 +136,15 @@
       <section class="services">
         <div class="services__container">
           <h2 class="services__title title">дополнительные услуги</h2>
-          <p class="services__description">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>
+          <p class="services__description">
+            Перед запуском проекта, мы подготавливаем подробную смету и
+            согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы
+            можем приступать к реализациии проекта, начинается сложная, но
+            интересная работа, результатом которой будет проведение вашего
+            мероприятия на высшем уровне.
+          </p>
 
+          <!-- prettier-ignore -->
           <table class="services__table table">
             <colgroup class="table__colgroup table__colgroup--w400" span="1"></colgroup>
             <colgroup class="table__colgroup">
@@ -252,7 +260,6 @@
               </tr>
             </tfoot>
           </table>
-
           <div class="services__buttons action">
             <div class="action__title">Я хочу:</div>
             <div class="action__container">
@@ -264,33 +271,42 @@
           <div class="services__info">
             <div class="services__info-item">
               <picture class="services__info-picture">
-                <img src="./assets/images/information.svg" alt="Цены" class="services__info-icon">
+                <img src="./assets/images/information.svg" alt="Цены" class="services__info-icon" />
               </picture>
               <h6 class="services__info-subtitle">Цены</h6>
-              <p class="services__info-data">Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом.</p>
+              <p class="services__info-data">
+                Цены, указанные на сайте носят информационный характер. Мы
+                придерживаемся индивидуального подхода в работе с клиентом.
+              </p>
             </div>
             <div class="services__info-item">
               <picture class="services__info-picture">
-                <img src="./assets/images/contact.svg" alt="Контакты" class="services__info-icon">
+                <img src="./assets/images/contact.svg" alt="Контакты" class="services__info-icon" />
               </picture>
               <h6 class="services__info-subtitle">Контакты</h6>
-              <p class="services__info-data">Отдел организации мероприятий
+              <p class="services__info-data">
+                Отдел организации мероприятий
                 <br />+7 499 350 0730
                 <br />hi@tagree.ru
               </p>
             </div>
             <div class="services__info-item">
               <picture class="services__info-picture">
-                <img src="./assets/images/handshake.svg" alt="Преимущество" class="services__info-icon">
+                <img src="./assets/images/handshake.svg" alt="Преимущество" class="services__info-icon" />
               </picture>
               <h6 class="services__info-subtitle">Преимущество</h6>
-              <p class="services__info-data">Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым талантам, так и большим корпорациям и холдингам.</p>
+              <p class="services__info-data">
+                Мы имеем все возможности для того, чтобы помочь как малому
+                бизнесу и молодым талантам, так и большим корпорациям и
+                холдингам.
+              </p>
             </div>
           </div>
         </div>
       </section>
     </div>
   </main>
+  <!-- prettier-ignore -->
   <footer class="page-footer">
     <div class="page-footer__container">
       <div class="page-footer__main">
@@ -302,16 +318,20 @@
           <a href="./index.html#contacts" class="page-footer__link">Контакты</a>
         </nav>
 
-        <form class="page-footer__form">
+        <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__form" id="js-subscribeForm">
           <div class="page-footer__form-label">
             <span class="page-footer__form-span">Подпишись и будь в курсе происходящего</span>
-            <input type="email" class="page-footer__form-input" placeholder="Email" />
-            <button class="page-footer__form-button" type="submit">Подписаться</button>
+            <input id="js-subscribeEmail" type="email" name="email" class="page-footer__form-input" placeholder="Email" required />
+            <button class="page-footer__form-button" type="submit">
+              Подписаться
+            </button>
           </div>
+          <!-- prettier-ignore -->
           <label class="checkbox page-footer__checkbox">
-            <input type="checkbox" name="subscribe" class="checkbox__input" checked />
+            <input type="checkbox" name="isSubscribe" class="checkbox__input" required value="@@value" />
             <span class="checkbox__label">Согласен на обработку персональных данных</span>
           </label>
+
         </form>
       </div>
 
@@ -344,6 +364,7 @@
       </div>
     </div>
   </footer>
+
   <div class="modal" id="js-modal">
     <div class="modal__wrapper">
       <button type="button" class="modal__x-button x-button" id="js-close-modal-button">
@@ -354,10 +375,13 @@
         <h2 class="modal__title">Заполните форму
           <br />и мы подберем площадку
         </h2>
-        <form class="modal__form form">
+        <form class="modal__form form" id="js-eventForm">
           <div class="form__section form__section--first">
-            <h4 class="form__subtitle form__subtitle--first">Формат мероприятия:</h4>
+            <h4 class="form__subtitle form__subtitle--first">
+              Формат мероприятия:
+            </h4>
             <div class="form__elements form__elements--ff-col">
+              <!-- prettier-ignore -->
               <label class="radio form__radio">
                 <input type="radio" class="radio__input" name="type" checked />
                 <span class="radio__label">Мастер-класс/семинар</span>
@@ -381,8 +405,10 @@
             <h4 class="form__subtitle">Планируемое количество посетителей:</h4>
             <div class="form__elements form__elements--mb30">
               <label class="form__field field">
-                <select class="field__select" name="people">
-                  <option value="0-20" selected>до 20 человек</option>
+                <select class="js-selectric field__select" name="people">
+                  <option value="0-20" selected>
+                    до 20 человек
+                  </option>
                   <option value="20-100">от 20 до 100 человек</option>
                   <option value="100-500">от 100 до 500 человек</option>
                   <option value="500">более 500 человек</option>
@@ -391,16 +417,16 @@
             </div>
 
             <h4 class="form__subtitle">Дата проведения:</h4>
-            <div class="form__elements form__elements--min-content">
-              <label class="form__field field">
-                <input type="text" name="day" class="field__input field__input--w55" placeholder="ДД">
-              </label>
-              <label class="form__field field">
-                <input type="text" name="month" class="field__input field__input--w55" placeholder="ММ">
-              </label>
-              <label class="form__field field">
-                <input type="text" name="year" class="field__input field__input--w110" placeholder="ГГГГ">
-              </label>
+            <div class="form__field field js-dateField">
+              <div class="field__date">
+                <div class="field__date-inputs">
+                  <input class="field__date-input js-dateDay" type="text" placeholder="ДД" readonly />
+                  <input class="field__date-input js-dateMonth" type="text" placeholder="ММ" readonly />
+                  <input class="field__date-input field__date-input--year js-dateYear" type="text" placeholder="ГГГГ" readonly />
+                </div>
+
+                <input class="field__date-picker js-dateInput" type="text" name="date" readonly required />
+              </div>
             </div>
           </div>
 
@@ -409,45 +435,61 @@
             <div class="form__elements form__elements--flex">
               <label class="form__field form__field--half-width field">
                 <span class="field__label">Имя*</span>
-                <input type="text" name="name" class="field__input" placeholder="Имя">
+                <input type="text" name="name" class="field__input" placeholder="Имя" required />
               </label>
               <label class="form__field form__field--half-width field">
                 <span class="field__label">Фамилия*</span>
-                <input type="text" name="surname" class="field__input" placeholder="Фамилия">
+                <input type="text" name="surname" class="field__input" placeholder="Фамилия" required />
               </label>
               <label class="form__field form__field--half-width field">
                 <span class="field__label">Телефон*</span>
-                <input type="text" name="phone" class="field__input" placeholder="+7 (___) ___ __ __">
+                <input type="text" name="phone" class="field__input js-mobileMask" placeholder="Телефон" required />
               </label>
               <label class="form__field form__field--half-width field">
                 <span class="field__label">Email*</span>
-                <input type="email" name="email" class="field__input" placeholder="Email">
+                <input type="email" name="email" class="field__input" placeholder="Email" required />
               </label>
             </div>
           </div>
 
           <div class="form__section form__section--full-width">
-            <h4 class="form__subtitle form__subtitle--last">Есть пожелания? Напишите нам:</h4>
+            <h4 class="form__subtitle form__subtitle--last">
+              Есть пожелания? Напишите нам:
+            </h4>
             <label class="form__field field">
               <textarea name="comments" class="field__textarea"></textarea>
             </label>
           </div>
 
           <div class="form__section form__section--full-width form__section--checkbox">
+            <!-- prettier-ignore -->
             <label class="checkbox form__checkbox">
-              <input type="checkbox" name="accept" class="checkbox__input" checked />
+              <input type="checkbox" name="isAccept" class="checkbox__input" required value="@@value" />
               <span class="checkbox__label">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
             </label>
+
           </div>
 
           <div class="form__buttons form__section--full-width">
-            <button class="form__button button" type="submit">Отправить</button>
-            <button class="form__button form__button--inline button" type="button" id="js-close-modal-form-button">Закрыть</button>
+            <button class="form__button button" type="submit">
+              Отправить
+            </button>
+            <button class="form__button form__button--inline button" type="button" id="js-close-modal-form-button">
+              Закрыть
+            </button>
           </div>
         </form>
       </div>
     </div>
   </div>
+
+
+  <script src="scripts/air-datepicker.js"></script>
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/jquery.selectric.min.js"></script>
+  <script src="scripts/jquery.mask.min.js"></script>
+  <script src="scripts/jquery.validate.min.js"></script>
+  <script src="scripts/jquery.validate-init.min.js"></script>
   <script src="./scripts/main.js"></script>
 </body>
 

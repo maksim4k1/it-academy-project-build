@@ -111,16 +111,20 @@
           <a href="./index.html#contacts" class="page-footer__link">Контакты</a>
         </nav>
 
-        <form class="page-footer__form">
+        <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__form" id="js-subscribeForm">
           <div class="page-footer__form-label">
             <span class="page-footer__form-span">Подпишись и будь в курсе происходящего</span>
-            <input type="email" class="page-footer__form-input" placeholder="Email" />
-            <button class="page-footer__form-button" type="submit">Подписаться</button>
+            <input id="js-subscribeEmail" type="email" name="email" class="page-footer__form-input" placeholder="Email" required />
+            <button class="page-footer__form-button" type="submit">
+              Подписаться
+            </button>
           </div>
+          <!-- prettier-ignore -->
           <label class="checkbox page-footer__checkbox">
-            <input type="checkbox" name="subscribe" class="checkbox__input" checked />
+            <input type="checkbox" name="isSubscribe" class="checkbox__input" required value="@@value" />
             <span class="checkbox__label">Согласен на обработку персональных данных</span>
           </label>
+
         </form>
       </div>
 
@@ -153,6 +157,7 @@
       </div>
     </div>
   </footer>
+
   <script src="./scripts/main.js"></script>
 </body>
 
